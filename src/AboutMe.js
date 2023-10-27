@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Box, Container, Typography } from '@mui/material';
-import Headshot from './img/headshot.jpg';
+//import Headshot from './img/headshot.jpg';
 
 const AboutMe = () => {
   return (
