@@ -1,0 +1,21 @@
+.type-writer {
+  user-select: none;
+  color: white;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.type-writer::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
