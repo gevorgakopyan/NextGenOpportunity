@@ -64,7 +64,7 @@ const MainPage = () => {
     setStartY(clientY);
   };
   const Name = [
-    `Hi, I'm Gev:)`,
+    `Hi, We are NextGenOpportunity:)`,
     'Welcome to my website!',
     'Rotate the cube to find out more about me...',
   ];
@@ -120,12 +120,12 @@ const MainPage = () => {
               }}
             >
               <Link
-                to='/experience'
+                to='/'
                 className='cube-face front'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                Experience
+                1
               </Link>
               <Link
                 to='/about-me'
@@ -133,33 +133,40 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                About Me
+                Data Critique
               </Link>
               <Link
-                to='/projects'
+                to='/'
                 className='cube-face left'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                Projects
+                2
               </Link>
               <Link
-                to='/resume'
+                to='/'
                 className='cube-face right'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                Resume
+                3
               </Link>
               <Link
-                to='/contact-me'
+                to='/'
                 className='cube-face top'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                Contact Me
+                4
               </Link>
-              <div className='cube-face bottom'></div>
+              <Link
+                to='/'
+                className='cube-face bottom'
+                draggable={false}
+                style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
+              >
+                5
+              </Link>
             </div>
           </div>
         </Grid>
