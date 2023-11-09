@@ -8,10 +8,11 @@ function Navbar() {
     window.innerWidth > 425
       ? [
           { to: '/', name: 'HOME' },
-          { to: '/projects', name: 'PROJECTS' },
-          { to: '/experience', name: 'EXPERIENCE' },
+          { to: '/team', name: 'MEAT THE TEAM' },
+          { to: '/about', name: 'ABOUT' },
           { to: '/narrative', name: 'NARRATIVE' },
-          { to: '/contact-me', name: 'CONTACT' },
+          { to: '/bibliography', name: 'BIBLIOGRAPHY' },
+          { to: '/data', name: 'DATA'}
         ]
       : [
           { to: '/', name: 'HOME' },
