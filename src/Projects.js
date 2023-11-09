@@ -5,7 +5,9 @@ import YujiImg from './img/YujiImg.png'
 import CarolynImg from './img/CarolynImg.JPEG'
 import LjungImg from './img/LjungImg.jpg'
 import RachelImg from './img/RachelImg.jpg'
+import GevImg from './img/GevImg.jpg'
 import Navbar from './Navbar';
+
 
 function Projects() {
   const fadeInDivs = useRef([]);
@@ -130,6 +132,14 @@ const projects = [
     skills: 'Role: Data Manager',
     bullets: [
       'Ijung is a senior-year undergraduate majoring in Statistics and Data Science. As the data manager, he is responsible for managing the data set and visualizing the data using Tableau. He also helped with data cleaning and EDA to contribute to this project.'
+    ],
+  },
+  {
+    img: GevImg,
+    title: "Gevorg Akopyan",
+    skills: 'Role: Web Developer',
+    bullets: [
+      'Gevorg is a senior-year undergraduate majoring in Computer Science. As the web developer, Gevorg is in charge of building the website. He integrates all the different parts together to make it work as a whole, and he makes sure the website stays up-to-date and runs smoothly.'
     ],
   },
 ];
