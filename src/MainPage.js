@@ -160,7 +160,7 @@ const MainPage = () => {
                 Projects
               </Link>
               <Link
-                to='/'
+                to='/team'
                 className='cube-face bottom'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}

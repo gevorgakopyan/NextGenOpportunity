@@ -4,7 +4,7 @@ import Narrative from './Narrative';
 // import Experience from './Experience';
 // import Resume from './Resume';
 // import ContactMe from './ContactMe';
-// import Projects from './Projects';
+import Projects from './Projects';
 import { ThemeProvider, createTheme } from '@mui/material';
 
 let theme = createTheme({
@@ -29,7 +29,7 @@ function App() {
       <Router>
         <div className='App'>
           <Routes>
-            {/* <Route path='/projects' element={<Projects />} /> */}
+            <Route path='/team' element={<Projects />} />
             <Route path='/narrative' element={<Narrative />} />
             {/* <Route path='/experience' element={<Experience />} />
             <Route path='/resume' element={<Resume />} />

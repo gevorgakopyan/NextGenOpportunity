@@ -1,10 +1,10 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React, { Fragment, useEffect, useRef } from 'react';
 import './Projects.css';
-import GregImg from './img/greg.png';
-import Maze from './img/maze.png';
-import RecGreg from './img/GameRecommendationEngineGreg.png';
-import Greg from './img/RobotGreg.png'
+import YujiImg from './img/YujiImg.png'
+import CarolynImg from './img/CarolynImg.JPEG'
+import LjungImg from './img/LjungImg.jpg'
+import RachelImg from './img/RachelImg.jpg'
 import Navbar from './Navbar';
 
 function Projects() {
@@ -61,10 +61,11 @@ function Projects() {
                 <Box
                   component='img'
                   sx={{
-                    height: 'auto',
-                    width: '100%',
-                    objectFit: 'contain',
-                    backgroundColor: '#0f0f0f',
+                    borderRadius: '50%',
+                    width: 'calc(min(90vw, 250px))',
+                    height: 'calc(min(90vw, 250px))',
+                    aspectRatio: '1/1',
+                    objectFit: 'cover',
                   }}
                   src={img}
                 />
@@ -77,32 +78,19 @@ function Projects() {
               className='fade-in'
               sx={{ paddingTop: { xs: '5px !important', sm: 'auto' } }}
             >
-              <Typography mt={{ xs: '0', sm: '30px' }} mb={1} variant='h4'>
+              <Typography mt={{ xs: '0', sm: '30px', color: 'black' }} mb={1} variant='h4'>
                 {title}
               </Typography>
               <Typography variant='body2' mb={1} color='secondary'>
                 {skills}
               </Typography>
-              <ul>
                 {bullets.map((bullet) => (
-                  <li key={bullet}>
-                    <Typography variant='body2' mb={1}>
-                      {bullet.startsWith('%link%') ? (
-                        <a
-                          href={bullet.split('%link%')[1]}
-                          rel='noreferrer'
-                          style={{ color: 'white' }}
-                          target='_blank'
-                        >
-                          {bullet.split('%link%')[1]}
-                        </a>
-                      ) : (
-                        bullet
-                      )}
+                  <p>
+                    <Typography variant='body2' mb={1} mt = {{color:'black', width:'75%'}}>
+                        {bullet}
                     </Typography>
-                  </li>
+                  </p>
                 ))}
-              </ul>
             </Grid>
           </Fragment>
         ))}
@@ -113,49 +101,35 @@ function Projects() {
 
 const projects = [
   {
-    img: GregImg,
-    title: 'React Online Shader Workspace Greg',
-    skills: 'WebGL, MongoDB, Express.js, Reacts.js, Node.js, CSS, JavaScript',
+    img: RachelImg,
+    title: 'Rachel Lei',
+    skills: 'Role: Content developer',
     bullets: [
-      '%link%https://shadygreg.netlify.app',
-      'Collaborated with 3 peers to construct an online, MERN-based platform for developing, sharing, and viewing GLSL shaders',
-      'Developed secure sign-up via Bcrypt salting, and Google OAuth with JWT for an OpenGL shader website',
-      'Adapted Code Mirror framework for OpenGL syntax highlighting in integrated code editor',
-      'Devised a user project ‘liking’ system to rank and showcase top-rated projects',
+      'Rachel is a third year undergraduate majoring in Anthropology and minoring in Digital Humanities. As the content developer, she supervised the project’s narrative flow, integrating photos and visualizations with the site’s textual content.'
     ],
   },
   {
-    img: Greg,
-    title: 'Interactive Pathfinder Simulator',
-    skills: 'JavaScript, WebGL',
+    img: CarolynImg,
+    title: 'Carolyn Wang',
+    skills: 'Role: Project Manager',
     bullets: [
-      '%link%https://github.com/gevorgakopyan/Robot-Greg',
-      'Led a team of 4 people to build a graphics application using JavaScript and WebGL API',
-      'Implemented A* algorithm, enhancing pathfinding efficiency from initial point to final destination by reducing computation time by an average of 26% compared to DFS and BFS algorithms',
-      'Defined API contracts for enemy, player, and game functionality to coordinate efficient team collaboration',
-      'Applied an observer design pattern via C# events to synchronize rhythm-dependent enemy and player behavior',
-      'Devised obstacle detection and applied texture mapping on different types of surfaces',
+      'Carolyn is a third year undergraduate studying Public Affairs and Statistics and Data Science at UCLA. As the project manager, she managed the project\'s schedule, deadlines, and milestones using Trello. Carolyn also managed the team’s shared Google Drive, ensured that communication among team members was harmonious, and communicated team needs externally.',
     ],
   },
   {
-    img: RecGreg,
-    title: 'Game Recommendation Engine Greg',
-    skills: 'Python, C++',
+    img: YujiImg,
+    title: 'Yuji Kusuyama',
+    skills: 'Role: Data Manager',
     bullets: [
-      '%link%https://github.com/gevorgakopyan/Greg-Game-Engine',
-      'Developed a GUI application which provides game recommendations based on user ratings or Steam ID',
-      'Engineered functionalities such as theme-changing, data retrieval through web requests, efficient data storage and manipulation using Python’s pickle and pandas moduless',
+      'Yuji is a senior-year undergraduate majoring in Statistics and Data Science and minoring in Data Science Engineering. As the data manager, he is responsible for cleaning the data and managing the dataset. He also helped with data analysis and visualization to contribute to this project.',
     ],
   },
   {
-    img: Maze,
-    title: "Multi-Level JavaFX Maze Game",
-    skills: 'Java, JavaFX',
+    img: LjungImg,
+    title: "Ijung Park",
+    skills: 'Role: Data Manager',
     bullets: [
-      '%link%https://github.com/gevorgakopyan/Maze-Game',
-      'Leveraged OOP concepts to incorporate MVC paradigm with collision detection between 7 distinct objects in a maze',
-      'Collaborated with UX designers to create animated sprites and immersive audio experiences for gameplay',
-      'Designed a level generation algorithm allowing for 5 unique mazes to challenge players',
+      'Ijung is a senior-year undergraduate majoring in Statistics and Data Science. As the data manager, he is responsible for managing the data set and visualizing the data using Tableau. He also helped with data cleaning and EDA to contribute to this project.'
     ],
   },
 ];
