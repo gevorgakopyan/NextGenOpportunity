@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './MainPage';
-import AboutMe from './AboutMe';
+import Narrative from './Narrative';
 // import Experience from './Experience';
 // import Resume from './Resume';
 // import ContactMe from './ContactMe';
 // import Projects from './Projects';
 import { ThemeProvider, createTheme } from '@mui/material';
-import ParticlesBackground from './Particles/ParticlesBackground';
 
 let theme = createTheme({
   palette: {
@@ -27,12 +26,11 @@ let theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>      
-    <ParticlesBackground/>
       <Router>
         <div className='App'>
           <Routes>
             {/* <Route path='/projects' element={<Projects />} /> */}
-            <Route path='/about-me' element={<AboutMe />} />
+            <Route path='/narrative' element={<Narrative />} />
             {/* <Route path='/experience' element={<Experience />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='/contact-me' element={<ContactMe />} /> */}

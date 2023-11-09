@@ -10,7 +10,7 @@ function Navbar() {
           { to: '/', name: 'HOME' },
           { to: '/projects', name: 'PROJECTS' },
           { to: '/experience', name: 'EXPERIENCE' },
-          { to: '/about-me', name: 'ABOUT' },
+          { to: '/narrative', name: 'NARRATIVE' },
           { to: '/contact-me', name: 'CONTACT' },
         ]
       : [
@@ -53,7 +53,7 @@ function Navbar() {
               }}
             />
             <NavLink
-              sx={navItem.to === currPage ? { color: 'white !important' } : {}}
+              sx={navItem.to === currPage ? { color: 'black !important' } : {}}
               href={navItem.to}
             >
               {navItem.name}

@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import { Box, Container, Typography } from '@mui/material';
 //import Headshot from './img/headshot.jpg';
 
-const AboutMe = () => {
+const Narrative = () => {
   return (
     <>
       <Navbar />
@@ -22,7 +22,7 @@ const AboutMe = () => {
               objectFit: 'cover',
             }}
           /> */}
-          <Typography variant='h4' mt={3}>
+          <Typography variant='h4' sx={{color: 'gray'}} mt={3}>
             Data Critique
           </Typography>
           <Typography
@@ -31,6 +31,7 @@ const AboutMe = () => {
               margin: '0.5rem auto',
               maxWidth: 'calc(min(90%, 550px))',
               textAlign: 'justify',
+              color: 'black'
             }}
           >
             The base data for the COI 2.0 Zip Code dataset is derived from census tract data gathered by the research organization, Diversity Data Kids, during the year of 2015. A census tract is a small, relatively permanent statistical subdivision of a county. Data was collected on each of these census tracts capturing the neighborhood’s resources and conditions that matter for children's healthy development. This composite index was based on 29 indicators spanning 3 domains: education, health and environment, and social and economic. Then, ZIP code level estimates were created for users who might have difficulties working with the census tract data. The organization reorganized and transitioned the data from the census tract level to the ZIP code level using weights provided by the U.S. Department for Housing and Urban Development. The weight is based on the proportion of residential addresses within a given ZIP code. For each zip code, the dataset lists the population between 0 and 17, the estimated number of each demographic group, the weighted averages/standard deviations of each of the domains, and overall child opportunity levels. The values of each of the domains and the overall child opportunity levels were standardized nationally, by state, and by metro so the researchers can examine these measures in regard to a more localized context or on a broader scale. This data may reveal differences in opportunities for children living across the United States and how a child’s zip code may determine a child’s future successes and challenges.
@@ -61,4 +62,4 @@ Also, even in the same region, there can be sufficient socioeconomic differences
   );
 };
 
-export default AboutMe;
+export default Narrative;

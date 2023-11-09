@@ -1,6 +1,6 @@
 .type-writer {
   user-select: none;
-  color: white;
+  color: black;
 }
 
 @keyframes blink {

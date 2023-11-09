@@ -24,7 +24,8 @@ body {
   padding: 0;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
-  background: #000;
+  background: #eee;
+  /* background-image: url('img/classroom.jpg'); */
 }
 
 header {

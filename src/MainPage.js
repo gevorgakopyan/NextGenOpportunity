@@ -125,15 +125,15 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                1
+                Data
               </Link>
               <Link
-                to='/about-me'
+                to='/narrative'
                 className='cube-face back'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                Data Critique
+                Narrative
               </Link>
               <Link
                 to='/'
@@ -141,7 +141,7 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                2
+                Bibliography
               </Link>
               <Link
                 to='/'
@@ -149,7 +149,7 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                3
+                About
               </Link>
               <Link
                 to='/'
@@ -157,7 +157,7 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                4
+                Projects
               </Link>
               <Link
                 to='/'
@@ -165,7 +165,7 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                5
+                Meet the Team
               </Link>
             </div>
           </div>
