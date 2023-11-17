@@ -9,7 +9,7 @@ import GevImg from './img/GevImg.jpg'
 import Navbar from './Navbar';
 
 
-function Projects() {
+function MeetTheTeam() {
   const fadeInDivs = useRef([]);
 
   const handleScroll = (intersections) => {
@@ -40,6 +40,7 @@ function Projects() {
   return (
     <Container>
       <Navbar />
+      <p style={{ marginBottom: '10vh' }}><center><h1>Meet the Team</h1></center></p>
       <Grid container spacing={5} pb={3}>
         {projects.map(({ img, title, skills, bullets }) => (
           <Fragment key={title}>
@@ -144,4 +145,4 @@ const projects = [
   },
 ];
 
-export default Projects;
+export default MeetTheTeam;
