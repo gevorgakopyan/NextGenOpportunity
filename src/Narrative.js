@@ -45,7 +45,7 @@ The dataset measures childrens opportunity by simplifying them into education, h
 Also, even in the same region, there can be sufficient socioeconomic differences within the region. For example, even in the same state of California, there are definitely differences between cities, and there are economic and social differences between neighborhoods within cities. So, we think we can exclude “msaid15” and “msname15” variables, which represent cities where states live, and use only “zip” variable for separating the area to best capture differences in child opportunity across geographical region.
 
           </Typography>
-          <TableauChart url={"https://us-west-2b.online.tableau.com/t/ijungpark1347/views/DH101_final/19"} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/shared/D2SXNY49M?:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{
