@@ -40,7 +40,7 @@ function MeetTheTeam() {
   return (
     <Container>
       <Navbar />
-      <p style={{ marginBottom: '10vh' }}><center><h1>Meet the Team</h1></center></p>
+      <p style={{ marginBottom: '10vh', color: '#046c75'}}><center><h1>Meet the Team</h1></center></p>
       <Grid container spacing={5} pb={3}>
         {projects.map(({ img, title, skills, bullets }) => (
           <Fragment key={title}>
@@ -81,10 +81,10 @@ function MeetTheTeam() {
               className='fade-in'
               sx={{ paddingTop: { xs: '5px !important', sm: 'auto' } }}
             >
-              <Typography mt={{ xs: '0', sm: '30px', color: 'black' }} mb={1} variant='h4'>
+              <Typography mt={{ xs: '0', sm: '30px', color: '#037e8c' }} mb={1} variant='h4'>
                 {title}
               </Typography>
-              <Typography variant='body2' mb={1} color='secondary'>
+              <Typography variant='body2' mb={1} color='#05a1b3'>
                 {skills}
               </Typography>
                 {bullets.map((bullet) => (
@@ -130,7 +130,7 @@ const projects = [
   {
     img: LjungImg,
     title: "Ijung Park",
-    skills: 'Role: Data Manager',
+    skills: 'Role: Data Visualisation Specialist',
     bullets: [
       'Ijung is a senior-year undergraduate majoring in Statistics and Data Science. As the data manager, he is responsible for managing the data set and visualizing the data using Tableau. He also helped with data cleaning and EDA to contribute to this project.'
     ],

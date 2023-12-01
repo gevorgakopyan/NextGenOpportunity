@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
-import TypeWriter from './TypeWriter';
+// import TypeWriter from './TypeWriter';
 import './MainPage.css';
 
 const MainPage = () => {
@@ -63,11 +63,11 @@ const MainPage = () => {
     setStartX(clientX);
     setStartY(clientY);
   };
-  const Name = [
-    `Hi, We are NextGenOpportunity:)`,
-    'Welcome to my website!',
-    'Rotate the cube to find out more about me...',
-  ];
+  // const Name = [
+  //   `Hi, We are NextGenOpportunity:)`,
+  //   'Welcome to my website!',
+  //   'Rotate the cube to find out more about me...',
+  // ];
   useEffect(() => {
     document.body.classList.add('no-scroll');
     return () => {
@@ -97,7 +97,10 @@ const MainPage = () => {
           }}
         >
           <h2>
-            <TypeWriter content={Name} speed={30} />
+            Welcome to NextGenOpportunity, a student project about child opportunity in the United States. 
+          </h2>
+          <h2>
+            Rotate the cube to learn more!
           </h2>
         </Grid>
         <Grid
