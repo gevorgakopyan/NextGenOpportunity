@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 // import TypeWriter from './TypeWriter';
 import './MainPage.css';
 
@@ -77,6 +78,7 @@ const MainPage = () => {
 
   return (
     <div style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
+      <Navbar />
       <Grid
         container
         onMouseUp={handleMouseUp}

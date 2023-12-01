@@ -5,19 +5,19 @@ import styled from '@emotion/styled';
 
 function Navbar() {
   const navItems =
-    window.innerWidth > 425
+    window.innerWidth > 425 //Home, About, Data, Narrative, Bibliography, Meet the Team
       ? [
           { to: '/', name: 'HOME' },
-          { to: '/team', name: 'MEAT THE TEAM' },
           { to: '/about', name: 'ABOUT' },
+          { to: '/data', name: 'DATA'},
           { to: '/narrative', name: 'NARRATIVE' },
           { to: '/bibliography', name: 'BIBLIOGRAPHY' },
-          { to: '/data', name: 'DATA'}
+          { to: '/team', name: 'MEAT THE TEAM' }
         ]
       : [
           { to: '/', name: 'HOME' },
-          { to: '/experience', name: 'EXPERIENCE' },
-          { to: '/projects', name: 'PROJECTS' },
+          { to: '/about', name: 'ABOUT' },
+          { to: '/data', name: 'DATA'},
         ];
 
   const NavLink = styled(Link)(({ theme }) => ({
