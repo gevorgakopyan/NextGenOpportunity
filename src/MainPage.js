@@ -77,8 +77,9 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
-      <Navbar />
+    <div>
+    <Navbar />
+    <div style={{ width: '100vw', height: '90vh', overflow: 'hidden' }}>
       <Grid
         container
         onMouseUp={handleMouseUp}
@@ -149,7 +150,7 @@ const MainPage = () => {
                 Bibliography
               </Link>
               <Link
-                to='/'
+                to='/about'
                 className='cube-face right'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
@@ -162,7 +163,7 @@ const MainPage = () => {
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
               >
-                Projects
+                {/* <img src="..\img\logongo.png" alt="logo"></img> */}
               </Link>
               <Link
                 to='/team'
@@ -176,6 +177,7 @@ const MainPage = () => {
           </div>
         </Grid>
       </Grid>
+    </div>
     </div>
   );
 };

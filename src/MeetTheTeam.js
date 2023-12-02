@@ -41,6 +41,7 @@ function MeetTheTeam() {
     <Container>
       <Navbar />
       <p style={{ marginBottom: '10vh', color: '#046c75'}}><center><h1>Meet the Team</h1></center></p>
+      <center><p style={{ marginBottom: '10vh', color: '#046c75', width:'70%'}}><h2>Meet the team behind NextGenOpportunity. We are five undergraduate students in the Fall 2023 Digital Humanities 101 course deeply interested in exploring educational disparities across the United States. Together, we built this website, specializing in our specific roles</h2></p></center>
       <Grid container spacing={5} pb={3}>
         {projects.map(({ img, title, skills, bullets }) => (
           <Fragment key={title}>
