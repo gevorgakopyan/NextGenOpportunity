@@ -126,7 +126,7 @@ const MainPage = () => {
               }}
             >
               <Link
-                to='/'
+                to='/data'
                 className='cube-face front'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}

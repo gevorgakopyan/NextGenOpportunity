@@ -5,6 +5,7 @@ import Narrative from './Narrative';
 // import Resume from './Resume';
 // import ContactMe from './ContactMe';
 import About from './About';
+import Data from './Data';
 import MeetTheTeam from './MeetTheTeam';
 import { ThemeProvider, createTheme } from '@mui/material';
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/team' element={<MeetTheTeam />} />
             <Route path='/narrative' element={<Narrative />} />
             <Route path='/about' element={<About/>}/>
+            <Route path='/data' element={<Data/>}/>
             {/* <Route path='/experience' element={<Experience />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='/contact-me' element={<ContactMe />} /> */}

@@ -12,7 +12,7 @@ function Navbar() {
           { to: '/data', name: 'DATA'},
           { to: '/narrative', name: 'NARRATIVE' },
           { to: '/bibliography', name: 'BIBLIOGRAPHY' },
-          { to: '/team', name: 'MEAT THE TEAM' }
+          { to: '/team', name: 'MEET THE TEAM' }
         ]
       : [
           { to: '/', name: 'HOME' },
