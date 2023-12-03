@@ -4,14 +4,14 @@ import Link from '@mui/material/Link';
 import TableauChart from './TableauChart';
 import { Box, Container, Typography, Button} from '@mui/material';
 
-const Data = () => {
+const Bibliography = () => {
   return (
     <>
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
           <Typography variant='h4' sx={{color: 'gray'}} mt={3}>
-            Data
+            Annotated Bibliography
           </Typography>
           <Typography variant='h5' sx={{color: 'gray'}} mt={3}>
             Our Dataset: The Child Opportunity Index
@@ -187,4 +187,4 @@ const Data = () => {
   );
 };
 
-export default Data;
+export default Bibliography;

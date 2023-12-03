@@ -142,7 +142,7 @@ const MainPage = () => {
                 Narrative
               </Link>
               <Link
-                to='/'
+                to='/bibliography'
                 className='cube-face left'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
