@@ -104,7 +104,9 @@ header .sub-heading {
 }
 
 .cube-container .top {
-  background: #a8dadc;
+  /* background: #a8dadc; */
+  background-image: url('./img/logongo.png');
+  background-size: contain;
   transform: rotateX(90deg) translateZ(var(--translateZ));
 }
 

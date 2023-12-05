@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+
 // import TypeWriter from './TypeWriter';
 import './MainPage.css';
 
@@ -162,8 +163,8 @@ const MainPage = () => {
                 className='cube-face top'
                 draggable={false}
                 style={{ pointerEvents: linksDisabled ? 'none' : 'auto' }}
-              >
-                {/* <img src="..\img\logongo.png" alt="logo"></img> */}
+              > 
+                {/* <div style={{width:"20px"}}><img src={logo} alt="logo" ></img></div> */}
               </Link>
               <Link
                 to='/team'
