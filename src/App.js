@@ -20,6 +20,10 @@ let theme = createTheme({
     allVariants: {
       color: 'white',
     },
+    fontFamily: [
+      'Source Sans Pro',
+      'sans-serif',
+    ].join(','),
   },
 });
 

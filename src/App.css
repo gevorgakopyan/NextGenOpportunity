@@ -19,3 +19,6 @@
 body.no-scroll {
   overflow: hidden;
 }
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}

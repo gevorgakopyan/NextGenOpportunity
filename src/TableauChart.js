@@ -22,7 +22,7 @@ const TableauChart = ({ url, options }) => {
     };
   }, [initViz]); // Dependency array now correctly includes initViz
 
-  return <div ref={ref}></div>;
+  return <div ref={ref} style={{width:'70%', marginLeft:'15%'}}></div>;
 };
 
 export default TableauChart;
