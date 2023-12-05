@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Box, Container, Typography } from '@mui/material';
-import TableauChart from './TableauChart';
+// import TableauChart from './TableauChart';
 //import Headshot from './img/headshot.jpg';
 
 const Narrative = () => {
@@ -10,21 +10,8 @@ const Narrative = () => {
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
-          {/* <Box
-            component='img'
-            src={Headshot}
-            alt='headshot'
-            className='my-picture'
-            sx={{
-              borderRadius: '100%',
-              width: 'calc(min(90vw, 400px))',
-              height: 'calc(min(90vw, 400px))',
-              aspectRatio: '1/1',
-              objectFit: 'cover',
-            }}
-          /> */}
-          <Typography variant='h4' sx={{color: 'gray'}} mt={3}>
-            Data Critique
+          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+            Introduction
           </Typography>
           <Typography
             variant='body1'
@@ -35,27 +22,58 @@ const Narrative = () => {
               color: 'black'
             }}
           >
-            The base data for the COI 2.0 Zip Code dataset is derived from census tract data gathered by the research organization, Diversity Data Kids, during the year of 2015. A census tract is a small, relatively permanent statistical subdivision of a county. Data was collected on each of these census tracts capturing the neighborhood’s resources and conditions that matter for children's healthy development. This composite index was based on 29 indicators spanning 3 domains: education, health and environment, and social and economic. Then, ZIP code level estimates were created for users who might have difficulties working with the census tract data. The organization reorganized and transitioned the data from the census tract level to the ZIP code level using weights provided by the U.S. Department for Housing and Urban Development. The weight is based on the proportion of residential addresses within a given ZIP code. For each zip code, the dataset lists the population between 0 and 17, the estimated number of each demographic group, the weighted averages/standard deviations of each of the domains, and overall child opportunity levels. The values of each of the domains and the overall child opportunity levels were standardized nationally, by state, and by metro so the researchers can examine these measures in regard to a more localized context or on a broader scale. This data may reveal differences in opportunities for children living across the United States and how a child’s zip code may determine a child’s future successes and challenges.
-
-The organization behind the Child Opportunity Index, Diversity Data Kids, acknowledges on its website that it receives funding from the W.K. Kellogg Foundation and the Robert Wood Johnson Foundation. The W.K. Kellogg Foundation is a private foundation with the mission to support equity in opportunity for disadvantaged children. The Robert Wood Johnson Foundation, also a private foundation, is dedicated to advancing health equity. The mission of both foundations are aligned with the aim of Diversity Data Kids in creating the Child Opportunity Index. As stated on their webpage, the COI was created to “widen the national conversation about addressing inequality to include not only income and wealth but also the neighborhood environments that our children experience.” As such, it appears that equity is the unifying theme for both foundations and the organization. This search for equity may have driven the data collection process and the research done on the dataset. No other funding sources have been identified outside of these two.
-
-
-After loading the dataset in R, we identified that the 2020 dataset, which sorts the data by the zipcodes defined in 2020, contains 23,871 missing values and empty spaces in the 'msaid15' and 'msaname15' columns (metro names and codes), and the last four columns which are the child opportunity index scores standardized by metro. Similarly, the 2019 dataset has 23,867 missing values, the 2018 dataset has 23,833, the 2017 dataset has 23,851, the 2016 dataset has 23,855, and the 2015 dataset has 23,867 missing values in the same columns. However, it's important to note that these missing values should not be a major concern, as our analysis will primarily use zip codes for geographical considerations.
-The dataset measures childrens opportunity by simplifying them into education, health and environmental, social and economic areas. However, by only considering these factors, one may be limited from exploring more complex cultural factors, family structures, and economic inequality.  Furthermore, datasets quantitatively measure and evaluate child opportunities, which can lead to a disregard for qualitative aspects. For example, descriptions of children’s dreams, goals, and achievements may be ignored when reducing the data collected to measurable numbers. Therefore, there may be a lack of more complex measures and qualitative aspects, which may limit the overall understanding and analysis of child opportunity. These limitations should be taken into account when using these datasets, analyzing their contents, and drawing comprehensive conclusions.
-Also, even in the same region, there can be sufficient socioeconomic differences within the region. For example, even in the same state of California, there are definitely differences between cities, and there are economic and social differences between neighborhoods within cities. So, we think we can exclude “msaid15” and “msname15” variables, which represent cities where states live, and use only “zip” variable for separating the area to best capture differences in child opportunity across geographical region.
-
+            <p style={{textIndent: "25px"}}> Over 70 million children in the United States are growing up across a variety of communities shaped by distinct geographies and demographics. Depending on where and how they grow up, their likelihood of success in educational attainment, economic mobility, and general wellbeing will be vastly different. There are many markers of high child opportunity. Out of these, one of the most prominent includes quality education. Children from families who live in economically prosperous neighborhoods with access to resources tend to receive a larger academic advantage in the form of well-funded schools and enhanced support networks. However, could there be deeper nuances to what contributes to high educational opportunity in children? As income gaps widen and schools struggle in both rural and urban locales, the factors behind educational disparities deserve further examination. What patterns exist within the population levels and socioeconomic status of American children’s home regions, and how do they connect to educational opportunity?</p>
           </Typography>
-          <TableauChart url={"https://public.tableau.com/shared/D2SXNY49M?:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{
               margin: '0.5rem auto',
               maxWidth: 'calc(min(90%, 550px))',
-              fontWeight: 'bold',
               textAlign: 'justify',
+              color: 'black'
             }}
           >
-            {/* I am seeking a full-time Software Engineering position for a new graduate where I can further contribute, learn, and grow. */}
+            <p style={{textIndent: "25px"}}>This is the question we investigate using the Child Opportunity Index. The Child Opportunity Index (COI), provided by the organization DiversityDataKids, aggregates data from 29 indicators of local child opportunity in the sectors of education, health, and socio-economic status. Specifically, we used the 2015 COI 2.0 Zip Code dataset.</p>
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 550px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>There is currently abundant research on differences in child opportunity across the urban and rural continuum. Our research examines disparities in education and socioeconomic status across higher and lower populated zip codes. This is useful for applying to our investigation into social spaces, as urban and rural designations are typically based on population levels, with urban zones having higher population levels and rural regions having lower populations. Many researchers argue that education levels are higher in urban areas. One study found that children, across different family characteristics and academic abilities who came from urban areas consistently chose to invest in their education when juxtaposed with children who were raised in rural environments (Van Maarseveen). However, the urban rural divide education is much more complicated than that, with some researchers finding that while child opportunity may be higher in urban areas compared to their rural counterparts, there are also greater inequities in child opportunity (Acevedo-Garcia, et al.). Scholarship further suggests that educational inequality cannot be simplified to the urban-rural binary and instead is much more connected to class differences with poverty being strongly linked to poor academic performance. Thus, as we explore differences in education between high and low populated areas, it is important for us to also examine variability within rural and urban areas as well as other domains such as socioeconomic status that may affect academic opportunity.</p>
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 550px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>Although educational gaps have been the subject of numerous past studies, our project specifically zero’s in on the relationship between socio spatial contexts and academic access. Educational opportunity continues to be influenced by a complex web of factors. While each community shares a need for providing children with quality education, their unique circumstances warrant customized solutions. Examining the patterns of educational access across geographies can call attention to previously overlooked areas of study, fostering a more nuanced and targeted approach to bridge gaps among children from different geographic landscapes. In the pursuit of a more equitable education system, further research may not only deepen our understanding of the dynamics at work in educational disparities but also provide a basis for developing tailored policies that better serve the communities they were created for. Ultimately, we aim to promote a more equitable landscape for the benefit of all children–and the future they create.</p>
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 550px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>In order to understand the next generation of children and their educational opportunities, it is essential to contextualize the state of modern day education. Before delving more deeply into present educational challenges and trends, here is a history of education in the United States.</p>
+          </Typography>
+          <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1q1IfgGh4DCZYuN8oVEW2K7qZJDANicngGTqKklf-uuE&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' title='Public Education in The 21st Century'>Timeline</iframe> 
+          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+            Overview of Existing Literature
+          </Typography>
+          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+            The Child Opportunity Index Nationwide
           </Typography>
         </Box>
       </Container>
