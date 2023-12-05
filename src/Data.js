@@ -75,7 +75,7 @@ const Data = () => {
             Who Created This Data?
           </Typography>
           <Box component="img" 
-                 src= {diversityKidsPic} // Replace with your image path
+                 src= {diversityKidsPic} 
                  alt="Diversity Data"
                  sx={{
                     maxWidth: '50%',
