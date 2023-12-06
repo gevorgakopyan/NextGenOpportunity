@@ -13,9 +13,6 @@ const Data = () => {
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
           <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
-            Data
-          </Typography>
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
             Our Dataset: The Child Opportunity Index
           </Typography>
           <Link href="https://data.diversitydatakids.org/dataset/coi20_zipcodes-child-opportunity-index-2-0-zip-code-data" underline="none">

@@ -17,7 +17,7 @@ const Narrative = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -28,7 +28,7 @@ const Narrative = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -39,7 +39,7 @@ const Narrative = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -50,7 +50,7 @@ const Narrative = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -61,14 +61,14 @@ const Narrative = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
           >
             <p style={{textIndent: "25px"}}>In order to understand the next generation of children and their educational opportunities, it is essential to contextualize the state of modern day education. Before delving more deeply into present educational challenges and trends, here is a history of education in the United States.</p>
           </Typography>
-          <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1q1IfgGh4DCZYuN8oVEW2K7qZJDANicngGTqKklf-uuE&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' title='Public Education in The 21st Century'>Timeline</iframe> 
+          <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1q1IfgGh4DCZYuN8oVEW2K7qZJDANicngGTqKklf-uuE&font=Default&lang=en&initial_zoom=2&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' title='Public Education in The 21st Century'>Timeline</iframe> 
           <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
             Overview of Existing Literature
           </Typography>

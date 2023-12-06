@@ -15,7 +15,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -30,7 +30,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -41,7 +41,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -55,7 +55,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -69,7 +69,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -80,7 +80,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -94,7 +94,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -111,7 +111,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
@@ -122,7 +122,7 @@ const About = () => {
             variant='body1'
             sx={{
               margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 550px))',
+              maxWidth: 'calc(min(90%, 850px))',
               textAlign: 'justify',
               color: 'black'
             }}
