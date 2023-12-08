@@ -60,7 +60,7 @@ function MeetTheTeam() {
       <br/>
       {/* <center><p style={{ marginBottom: '10vh', color: '#046c75', width:'70%'}}><h2>Meet the team behind NextGenOpportunity. We are five undergraduate students in the Fall 2023 Digital Humanities 101 course deeply interested in exploring educational disparities across the United States. Together, we built this website, specializing in our specific roles</h2></p></center> */}
       <Grid container spacing={5} pb={3}>
-        {projects.map(({ img, title, skills, bullets }) => (
+        {projects.map(({ img, alt, title, skills, bullets }) => (
           <Fragment key={title}>
             <Grid
               item
@@ -89,6 +89,7 @@ function MeetTheTeam() {
                     objectFit: 'cover',
                   }}
                   src={img}
+                  alt={alt}
                 />
               </Box>
             </Grid>
@@ -123,6 +124,7 @@ function MeetTheTeam() {
 const projects = [
   {
     img: RachelImg,
+    alt: 'Rachel Lei',
     title: 'Rachel Lei',
     skills: 'Role: Content developer',
     bullets: [
@@ -131,6 +133,7 @@ const projects = [
   },
   {
     img: CarolynImg,
+    alt: 'Carolyn Wang',
     title: 'Carolyn Wang',
     skills: 'Role: Project Manager',
     bullets: [
@@ -139,6 +142,7 @@ const projects = [
   },
   {
     img: YujiImg,
+    alt: 'Yuji Kusuyama',
     title: 'Yuji Kusuyama',
     skills: 'Role: Data Manager',
     bullets: [
@@ -147,6 +151,7 @@ const projects = [
   },
   {
     img: LjungImg,
+    alt: 'Ijung Park',
     title: "Ijung Park",
     skills: 'Role: Data Visualisation Specialist',
     bullets: [
@@ -155,6 +160,7 @@ const projects = [
   },
   {
     img: GevImg,
+    alt: 'Gevorg Akopyan',
     title: "Gevorg Akopyan",
     skills: 'Role: Web Developer',
     bullets: [
