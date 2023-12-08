@@ -427,7 +427,7 @@ const Narrative = () => {
             The concept of educational opportunities is closely linked to the economic conditions of a given society. The economic level of a society influences various facilities and infrastructure available for children's education, ultimately affecting the educational opportunities for children living in that society. Factors such as recruiting mentors for academic pursuits, creating a conducive study environment, and parents' enthusiasm for their children's education, which directly impact children's educational opportunities, often operate within the economic framework, especially in relatively affluent urban areas. These factors are consistent with ones mentioned in the work of Miller and Votruba-Drzal, who have discussed how impoverished urban areas can exacerbate adolescent achievement gaps due to scarcity in “cultural capital” (19). Low-income adolescents in suburban and rural settings tend to experience less socioeconomic segregation, and are therefore more likely to be exposed to “school climates, teach-ers  and  mentors,  and  peer  groups” that encourage academic success (19). 
             </p>
           </Typography>
-          <TableauChart url={"https://public.tableau.com/views/incomeedinter/Sheet1?:language=ko-KR&:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/views/incomeedinter/Sheet2?:language=en-US&:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{
