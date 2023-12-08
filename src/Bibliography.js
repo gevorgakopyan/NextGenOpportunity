@@ -8,7 +8,7 @@ const Bibliography = () => {
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
-            <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+            <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Annotated Bibliography
           </Typography>
           <Typography

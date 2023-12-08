@@ -9,7 +9,7 @@ const About = () => {
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             About the Project
           </Typography>
           <Box component="img" 
@@ -45,7 +45,7 @@ const About = () => {
           >
             This website, <a href="/">Next Gen Opportunity</a>, is our team's digital humanities project exploring the role of location and geography in shaping child education and opportunity across the United States.
           </Typography>
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Our Research Questions 
           </Typography>
           <Typography
@@ -70,7 +70,7 @@ const About = () => {
           >
             2. What patterns exist between income, education opportunity, and population?
           </Typography>
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Sources
           </Typography>
           <Typography
@@ -95,7 +95,7 @@ const About = () => {
           >
             The education domain of this dataset was our main point of focus. Specifically, we investigated the education scores in relation with high and low populated zip codes. To supplement our analysis, we collected relevant existing research covering education, child achievement, and family income gaps across different geographical spaces throughout the United States which illustrated the interdisciplinary nature of education in the United States. The secondary sources we used helped guide our data analysis and visualizations as they generally showed that there is a close connection between education, population, and socioeconomic status. Beyond these domains, we also examined the role of the health and environment sector in our research, and the role it plays in child opportunity. To learn more about the secondary sources we used, read our <a href="/bibliography"> Annotated bibliography.</a>
           </Typography>
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Processing
           </Typography>
           <Typography
@@ -120,7 +120,7 @@ const About = () => {
           >
             We conducted our statistical analysis for the project in R and Python and created data visualizations in Tableau. 
           </Typography> */}
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Presentation 
           </Typography>
           <Typography
@@ -137,7 +137,7 @@ const About = () => {
             All images, including those on the cube faces, have descriptive alt text, making the content accessible to screen reader users.
             he website's color scheme is designed with high contrast in mind, aiding visibility for users with visual impairments and ensuring compliance with standards.
           </Typography>
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Acknowledgements
           </Typography>
           <Typography

@@ -41,7 +41,7 @@ function MeetTheTeam() {
     <Container>
       <Navbar />
       <Box textAlign={'center'}>
-        <Typography variant='h3' sx={{color: '#046c75'}} mt={3}>
+        <Typography variant='h3' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
           Meet the Team
         </Typography>
         {/* <p style={{ marginBottom: '10vh', color: '#046c75'}}><center><h1>Meet the Team</h1></center></p> */}

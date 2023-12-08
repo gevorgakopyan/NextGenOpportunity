@@ -12,7 +12,7 @@ const Narrative = () => {
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Introduction
           </Typography>
           <Typography
@@ -129,7 +129,7 @@ const Narrative = () => {
             </p>
           </Typography>
           <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1q1IfgGh4DCZYuN8oVEW2K7qZJDANicngGTqKklf-uuE&font=Default&lang=en&initial_zoom=2&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' title='Public Education in The 21st Century'>Timeline</iframe> 
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Overview of Existing Literature
           </Typography>
           <Box component="img" 
@@ -249,7 +249,7 @@ const Narrative = () => {
             Finally, part of our literature touches upon the key role of health in child opportunity. Compared to urban children, rural children are heavily disadvantaged when it comes to health. Rural youth are 26% more likely to be obese than urban youth (McCormack and Meendering) and rural youth in poverty are at especially higher risk of developing mental, behavioral, and developmental disorders (Kelleher and Gardner 2017). Residing in isolated settings often result in decreased access to medical providers, and rural parents were less likely than urban parents to report a preventative healthcare or dental care visit for their children (Probst et al. 6). Children deserve to be in optimal health before they can reach their potential, and in this case rural children bear the consequences of being in areas that often lack readily available resources in healthcare, with consequences that can spill over into areas such as academic achievement. Though the health category is not within the main focus of our project, readers are encouraged to consider the wider picture of what affects children as we explore just a few factors in the complex web influencing patterns of child opportunity.
             </p>
           </Typography>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             The Child Opportunity Index Nationwide
           </Typography>
           <Typography
@@ -265,7 +265,7 @@ const Narrative = () => {
             Before diving into the specific education and socioeconomic domains of the Child Opportunity Index, let us explore its overall score distribution across the United States.
             </p>
           </Typography>
-          <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Map of Overall COI
           </Typography>
           <TableauChart url={"https://public.tableau.com/shared/9QTQYNGCS?:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
@@ -295,7 +295,7 @@ const Narrative = () => {
             If the overall COI score is reflective of previous scholarship regarding education, we might expect to see similarly aligned results as we move into focusing on educational opportunity. Child opportunity in education could be highest at a medium population density indicative of the “middle suburb” category discussed by Burdick-Will and Logan. In accordance with the concentrated opportunity gaps in urban zones, metropolitan centers could be a motley of ZIP codes boasting very high educational opportunity scores juxtaposed with ZIP codes possessing starkly lower forms of those scores.
             </p>
           </Typography>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Relationships between Population & Education
           </Typography>
           <Typography
@@ -366,7 +366,7 @@ const Narrative = () => {
             These data visualizations add depth to our earlier discussion about regional differences in educational opportunities. Overall, educational opportunity score distributions are reflective of the findings communicated in established scholarship on education performance across diverse socio spatial contexts. 
             </p>
           </Typography>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Relationships between Population & Education
           </Typography>
           <Typography
@@ -411,7 +411,7 @@ const Narrative = () => {
             The "Interaction Plot of Population and Income Scores” shows the total social economic scores and breaks them down into categories like "Very High," "High," "Moderate," "Low," and "Very Low." What's interesting here is that regions with higher populations tend to have slightly higher socioeconomic scores across all levels when compared to regions with lower populations. However, when you look closer, there's a twist. ZIP codes with lower populations have more total income scores in the "Very High" category. This is quite interesting considering areas with higher populations still end up with higher overall total social economic scores. This detail makes us think more about how population and income scores interact, showing that it may not be as straightforward as it may seem.
             </p>
           </Typography>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Connecting the Social Economic Domain to Educational Opportunity
           </Typography>
           <Typography
@@ -455,7 +455,7 @@ const Narrative = () => {
             However, one might wonder whether the correlation between social and economic status and education is prevalent in both high and low populated ZIP codes or if this relationship is much stronger in urban or rural regions.  In the plot above, both low-population and high-population areas show the strong relationship that as the socioeconomic opportunity score increases, the education opportunity score also increases. Furthermore, it appears that the interaction between socioeconomic opportunity score and education opportunity score may even be slightly more pronounced in low-population areas. Therefore, it can be concluded that the population itself does not significantly impact the interaction between education opportunity score and socioeconomic opportunity score and that socioeconomic status has a strong positive correlation with education. 
             </p>
           </Typography>
-          <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
+          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Conclusion
           </Typography>
           <Typography
