@@ -20,11 +20,11 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             <i>Acevedo-Garcia, Dolores, et al.</i> “Racial And Ethnic Inequities In Children’s Neighborhoods:
             <br/>&emsp;&ensp; Evidence From The New Child Opportunity Index 2.0”<i>Health Affairs (Project Hope)</i>, 
             <br/>&emsp;&ensp; vol. 39, no. 10, 2020, pp. 1693–1701, doi:10.1377/hlthaff.2020.00735.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -46,9 +46,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             McCormack, Lacey and Meendering, Jessica. “Diet and Physical Activity in Rural vs Urban <br/>&emsp;&ensp;Children and Adolescents in the United States: A Narrative Review.” Journal of the <br/>&emsp;&ensp;Academy of Nutrition and Dietetics, Vol 116, No 3, 2016, pp. 467-480, <br/>&emsp;&ensp;https://doi.org/10.1016/j.jand.2015.10.024.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -70,9 +70,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Van Maarseveen, Raoul. “The urban–rural education gap: do cities indeed make us smarter?” <br/>&emsp;&ensp;Journal of Economic Geography, Volume 21, No 5, 2021, pp. 683–714, <br/>&emsp;&ensp;https://doi.org/10.1093/jeg/lbaa033.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -94,9 +94,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Miller, Portia, Elizabeth Votruba-Drzal, and Claude M. Setodji. "Family income and early <br/>&emsp;&ensp;achievement across the urban–rural continuum." Developmental psychology, vol. 49, no. <br/>&emsp;&ensp;8, 2013, pp. 1452-1465. ProQuest, <br/>&emsp;&ensp;https://www.proquest.com/scholarly-journals/family-income-early-achievement-across-ur<br/>&emsp;&ensp;ban/docview/1081872500/se-2, doi:https://doi.org/10.1037/a0030244.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -118,9 +118,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Tieken, Mara Casey. “The Spatialization of Racial Inequity and Educational <br/>&emsp;&ensp;Opportunity:Rethinking the Rural/Urban Divide.” Peabody Journal of Education, vol. 92, <br/>&emsp;&ensp;no. 3, 2017, pp. 385–404, https://doi.org/10.1080/0161956X.2017.1324662.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -142,9 +142,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
              Burdick-Will, Julia, and John R. Logan. “Schools at the Rural-Urban Boundary: Blurring the <br/>&emsp;&ensp;Divide?” The Annals of the American Academy of Political and Social Science, vol. 672, <br/>&emsp;&ensp;no. 1, 2017, pp. 185–201, https://doi.org/10.1177/0002716217707176.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -166,9 +166,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Chetty, Raj, et al. “The Effects of Exposure to Better Neighborhoods on Children: New Evidence <br/>&emsp;&ensp;from the Moving to Opportunity Experiment.” The American Economic Review, vol. 106, <br/>&emsp;&ensp;no. 4, 2016, pp. 855–902. JSTOR, http://www.jstor.org/stable/43821479. Accessed 26 <br/>&emsp;&ensp;Oct. 2023.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -190,9 +190,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Thiede, Brian C., et al. “Income Inequality Across the Rural‐Urban Continuum in the United <br/>&emsp;&ensp;States, 1970–2016.” Rural Sociology, vol. 85, no. 4, 2020, pp. 899–937, <br/>&emsp;&ensp;https://doi.org/10.1111/ruso.12354.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -214,9 +214,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
              Leventhal, Tama, and Jeanne Brooks-Gunn. “The Neighborhoods They Live in: The Effects of <br/>&emsp;&ensp;Neighborhood Residence on Child and Adolescent Outcomes.” Psychological Bulletin, <br/>&emsp;&ensp;vol. 126, no. 2, 2000, pp. 309–37, https://doi.org/10.1037/0033-2909.126.2.309.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -238,9 +238,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Miller, Portia, and Elizabeth Votruba-Drzal. “Urbanicity Moderates Associations Between <br/>&emsp;&ensp;Family Income and Adolescent Academic Achievement.” Rural Sociology, vol. 80, no. 3, <br/>&emsp;&ensp;2015, pp. 362–86, https://doi.org/10.1111/ruso.12067.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -262,9 +262,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Votruba-Drzal, Elizabeth, et al. “Poverty, Urbanicity, and Children’s Development of Early<br/>&emsp;&ensp; Academic Skills.” Child Development Perspectives, vol. 10, no. 1, 2016, pp. 3–9, <br/>&emsp;&ensp;https://doi.org/10.1111/cdep.12152.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -286,9 +286,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Crouch, E., Radcliff, E., Probst, J.C., Bennett, K.J. and McKinney, S.H. “Rural-Urban <br/>&emsp;&ensp;Differences in Adverse Childhood Experiences Across a National Sample of Children.” <br/>&emsp;&ensp;The Journal of Rural Health, Vol 36: 2020, pp. 55-64. https://doi.org/10.1111/jrh.12366
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -310,9 +310,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Hertz, Thomas, and Silva, Andres. “Rurality and Income Inequality in the United States” Rural <br/>&emsp;&ensp;sociology, Vol.85, No. 2, 2020, pp. 436-467. <br/>&emsp;&ensp;https://onlinelibrary.wiley.com/doi/abs/10.1111/ruso.12295.
-           </p></Typography>
+            </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -334,9 +334,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Kelleher, Kelly J. and Gardner, William. “Out of Sight, Out of Mind–Behavioral and <br/>&emsp;&ensp;Developmental Care for Rural Children.” New England Journal of Medicine, vol 376, no. <br/>&emsp;&ensp;14, 2017, pp. 1301-1303. https://browzine.com/libraries/33/articles/83885801.
-           </p></Typography>
+           </b></p></Typography>
            <Typography
             variant='body1'
             sx={{
@@ -358,9 +358,9 @@ const Bibliography = () => {
               color: 'black'
             }}
           >
-           <p style={{textIndent: "0px"}}>
+           <p style={{textIndent: "0px"}}><b>
             Probst, Janice, Barker, Judith, Enders, Alexandra, Gardiner, Paula; “Current State of Child <br/>&emsp;&ensp;Health in Rural America: How Context Shapes Children's Health.” The Journal of Rural <br/>&emsp;&ensp;Health, 2018, Vol. 34, pp. 3-12. https://browzine.com/libraries/33/articles/60556370. 
-           </p></Typography>
+           </b></p></Typography>
            <Typography
             variant='body1'
             sx={{

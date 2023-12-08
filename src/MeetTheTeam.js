@@ -40,8 +40,25 @@ function MeetTheTeam() {
   return (
     <Container>
       <Navbar />
-      <p style={{ marginBottom: '10vh', color: '#046c75'}}><center><h1>Meet the Team</h1></center></p>
-      <center><p style={{ marginBottom: '10vh', color: '#046c75', width:'70%'}}><h2>Meet the team behind NextGenOpportunity. We are five undergraduate students in the Fall 2023 Digital Humanities 101 course deeply interested in exploring educational disparities across the United States. Together, we built this website, specializing in our specific roles</h2></p></center>
+      <Box textAlign={'center'}>
+        <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
+          Meet the Team
+        </Typography>
+        {/* <p style={{ marginBottom: '10vh', color: '#046c75'}}><center><h1>Meet the Team</h1></center></p> */}
+        <Typography
+              variant='body1'
+              sx={{
+                margin: '0.5rem auto',
+                maxWidth: 'calc(min(90%, 850px))',
+                textAlign: 'justify',
+                color: 'black'
+              }}
+            >
+              Meet the team behind NextGenOpportunity. We are five undergraduate students in the Fall 2023 Digital Humanities 101 course deeply interested in exploring educational disparities across the United States. Together, we built this website, specializing in our specific roles
+        </Typography>
+      </Box>
+      <br/>
+      {/* <center><p style={{ marginBottom: '10vh', color: '#046c75', width:'70%'}}><h2>Meet the team behind NextGenOpportunity. We are five undergraduate students in the Fall 2023 Digital Humanities 101 course deeply interested in exploring educational disparities across the United States. Together, we built this website, specializing in our specific roles</h2></p></center> */}
       <Grid container spacing={5} pb={3}>
         {projects.map(({ img, title, skills, bullets }) => (
           <Fragment key={title}>

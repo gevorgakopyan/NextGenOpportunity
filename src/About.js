@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Logo from './img/logongo.png'
 import { Box, Container, Typography } from '@mui/material';
 
 const About = () => {
@@ -11,6 +12,17 @@ const About = () => {
           <Typography variant='h4' sx={{color: '#046c75'}} mt={3}>
             About the Project
           </Typography>
+          <Box component="img" 
+                 src= {Logo} 
+                 alt="logo"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
           <Typography
             variant='body1'
             sx={{
@@ -20,8 +32,18 @@ const About = () => {
               color: 'black'
             }}
           >
-            NextGenOpportunity is an undergraduate project created as part of UCLA’s Introduction to Digital Humanities course. Using a publically-available database of their choosing, students applied computational methods to conduct humanistic inquiry on their database.
-            The resulting narrative is presented in an engaging, interactive website.
+            NextGenOpportunity is an undergraduate project created as part of UCLA's Introduction to Digital Humanities course (Digital Humanities 101). Using a publically-available database of their choosing, students applied computational methods to conduct humanistic inquiry on their database. The resulting narrative is presented in an engaging, interactive website.
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            This website, <a href="/">Next Gen Opportunity</a>, is our team's digital humanities project exploring the role of location and geography in shaping child education and opportunity across the United States.
           </Typography>
           <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
             Our Research Questions 
@@ -60,7 +82,18 @@ const About = () => {
               color: 'black'
             }}
           >
-            Our team used data from the 2015 Child Opportunity Index (COI) zip code dataset, provided by the organization DiversityDataKids. The COI aggregates 29 indicators across education, social and economic, and health and environment sectors into one comprehensive score on a scale of 1 to 100. In the case of our dataset, the COI scores were estimated for each ZIP Code area. The education domain of this dataset was our main point of focus. Specifically, we investigated the education COI scores in relation with high and low populated zip codes. To supplement our analysis, we collected relevant existing research covering education, child achievement, and family income gaps across different geographical spaces throughout the United States.
+            Our team used data from the <a href="https://data.diversitydatakids.org/dataset/coi20_zipcodes-child-opportunity-index-2-0-zip-code-data">2015 Child Opportunity Index (COI)</a> zip code dataset, provided by the organization DiversityDataKids.  The COI aggregates 29 indicators across education, social and economic, and health and environment sectors into one comprehensive score on a scale of 1 to 100 while also retaining the scores across each of the domains. In the case of our dataset, the COI scores as well as scores for each domain were estimated for each Zip Code area. 
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            The education domain of this dataset was our main point of focus. Specifically, we investigated the education scores in relation with high and low populated zip codes. To supplement our analysis, we collected relevant existing research covering education, child achievement, and family income gaps across different geographical spaces throughout the United States which illustrated the interdisciplinary nature of education in the United States. The secondary sources we used helped guide our data analysis and visualizations as they generally showed that there is a close connection between education, population, and socioeconomic status. Beyond these domains, we also examined the role of the health and environment sector in our research, and the role it plays in child opportunity. To learn more about the secondary sources we used, read our <a href="/bibliography"> Annotated bibliography.</a>
           </Typography>
           <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
             Processing
@@ -74,9 +107,9 @@ const About = () => {
               color: 'black'
             }}
           >
-            Once we downloaded our raw dataset, we set about getting to know and cleaning the data in R. We found that there were many missing values when it came to data collected on the metropolitan level. However, these missing values were unimportant as we wanted to explore differences in education by zip code, not by metro. We also created a new categorical variable, high_low_pop, that designated each zip code as low or high population, depending on whether its population, indicated by the existing pop variable, fell lower or higher than the median value of the pop variable. This newly created variable was incredibly important for our analysis which compared education levels across high or low populated zip codes. 
+            Once we downloaded our raw dataset, we set about getting to know and cleaning the data in R. In R, we searched for missing values and other inconsistencies in the data. We found that there were many missing values, over 20000, when it came to data collected on the metropolitan level. However, these missing values were unimportant as we wanted to explore differences in education by zip code, not by metropolitan area. Thus, we were lucky to not need to deal with much data cleaning in our dataset. In R, we also created a new categorical variable, high_low_pop, that designated each zip code in the original dataset as low or high population. high_low_pop can either be “high” or “low” and its designation depends on whether its population, indicated by the existing pop variable, fell lower or higher than the median value of the overall pop variable. This newly created variable was incredibly important for our analysis which compared education levels and socioeconomic levels across high and low populated zip codes. We then imported our dataset with the new high_low_pop variable into Tableau to create data visualizations including bar charts and maps. In Tableau, we edited names of variables to more intuitive labels to make the resulting data visualizations more straightforward for the viewer.
           </Typography>
-          <Typography
+          {/* <Typography
             variant='body1'
             sx={{
               margin: '0.5rem auto',
@@ -86,7 +119,7 @@ const About = () => {
             }}
           >
             We conducted our statistical analysis for the project in R and Python and created data visualizations in Tableau. 
-          </Typography>
+          </Typography> */}
           <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
             Presentation 
           </Typography>
@@ -116,7 +149,7 @@ const About = () => {
               color: 'black'
             }}
           >
-            Special thanks to Theresa Edwards for her continued support on our project. We could not have created our final product without all of your feedback and guidance throughout the process. 
+            Special thanks to <b>Theresa Edwards</b> for her continued support on our project. We could not have created our final product without all of your feedback and guidance throughout the process. 
           </Typography>
           <Typography
             variant='body1'
@@ -127,7 +160,7 @@ const About = () => {
               color: 'black'
             }}
           >
-            We would also like to thank Dr. Wendy Perla Kertz for sharing your passion and knowledge about the Digital Humanities and giving us the tools needed to succeed in this project!
+            We would also like to thank <b>Dr. Wendy Perla Kertz</b> for sharing your passion and knowledge about the Digital Humanities and giving us the tools needed to succeed in this project!
           </Typography>
         </Box>
       </Container>

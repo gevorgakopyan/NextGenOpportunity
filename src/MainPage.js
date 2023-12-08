@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
 
 // import TypeWriter from './TypeWriter';
 import './MainPage.css';
@@ -79,7 +78,6 @@ const MainPage = () => {
 
   return (
     <div>
-    <Navbar />
     <div style={{ width: '100vw', height: '90vh', overflow: 'hidden' }}>
       <Grid
         container
@@ -104,7 +102,7 @@ const MainPage = () => {
             Welcome to NextGenOpportunity, a student project about child opportunity in the United States. 
           </h2>
           <h2>
-            Rotate the cube to learn more!
+            Rotate and double click the cube to learn more!
           </h2>
         </Grid>
         <Grid
