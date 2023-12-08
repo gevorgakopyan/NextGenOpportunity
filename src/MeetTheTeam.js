@@ -100,10 +100,10 @@ function MeetTheTeam() {
               className='fade-in'
               sx={{ paddingTop: { xs: '5px !important', sm: 'auto' } }}
             >
-              <Typography mt={{ xs: '0', sm: '30px', color: '#037e8c' }} mb={1} variant='h4'>
+              <Typography mt={{ xs: '0', sm: '30px', color: '#037e8c' }} sx={{fontFamily: 'Georgia'}} mb={1} variant='h4'>
                 {title}
               </Typography>
-              <Typography variant='body2' mb={1} color= '#046c75'>
+              <Typography variant='body2' mb={1} color= '#046c75' sx={{fontFamily: 'Georgia'}}>
                 {skills}
               </Typography>
                 {bullets.map((bullet) => (

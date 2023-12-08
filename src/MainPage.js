@@ -98,12 +98,14 @@ const MainPage = () => {
             paddingLeft: { xs: '0', md: '10%', lg: '20%' },
           }}
         >
+          <div style={{fontFamily: "Georgia"}}>
           <h2>
             Welcome to NextGenOpportunity, a student project about child opportunity in the United States. 
           </h2>
           <h2>
             Rotate and double click the cube to learn more!
           </h2>
+        </div>
         </Grid>
         <Grid
           item
