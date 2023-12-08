@@ -22,7 +22,7 @@ function Navbar() {
 
   const NavLink = styled(Link)(({ theme }) => ({
     fontSize: '0.8rem',
-    color: theme.palette.secondary.main,
+    color: 'black',
     textDecoration: 'none',
     zIndex: 2,
   }));
@@ -54,7 +54,7 @@ function Navbar() {
               }}
             />
             <NavLink
-              sx={navItem.to === currPage ? { color: 'black !important' } : {}}
+              sx={navItem.to === currPage ? { color: '#046c75 !important' } : {}}
               href={navItem.to}
             >
               {navItem.name}
