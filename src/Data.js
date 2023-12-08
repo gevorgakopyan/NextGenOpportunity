@@ -190,7 +190,7 @@ const Data = () => {
           >
             Though our dataset focuses on child opportunity as a whole, we decided to make the focal point of our exploration child education because high quality education is strongly linked to social mobility and healthy child development. In America, people view education as intrinsically connected to the American dream, with hard work and a good education leading to a better life. However, the quality of education across our country is not equal. As you can see from the following visualization of our dataset, child education levels vary greatly in the United States.
           </Typography>
-          <TableauChart url={"https://public.tableau.com/views/Datavizproject_17011575078090/MAP?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link ic.tableau.com/shared/D2SXNY49M?:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/views/Datavizproject_17011575078090/MAP?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{

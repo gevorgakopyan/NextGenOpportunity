@@ -16,9 +16,9 @@ const About = () => {
                  src= {Logo} 
                  alt="logo"
                  sx={{
-                    maxWidth: '50%',
+                    maxWidth: '35%',
                     alignItems:'left',
-                    height: '50%',
+                    height: '35%',
                     marginTop: '1rem',
                     marginBottom: '1rem'
                  }}
