@@ -268,7 +268,7 @@ const Narrative = () => {
           <Typography variant='h5' sx={{color: '#046c75'}} mt={3}>
             Map of Overall COI
           </Typography>
-          <TableauChart url={"https://public.tableau.com/app/profile/ijung.park/viz/shared/85WZWGH6Y"} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/shared/9QTQYNGCS?:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{
@@ -311,7 +311,7 @@ const Narrative = () => {
             We used the versatile software Tableau to create our dataset visualizations. In the following map, we take a closer look at the COI score across the U.S., this time specifically with the COI education domain. The red dots show ZIP codes with lower population, while the blue dots represent more heavily populated ZIP codes. The size of the dots correspond to the education score, with larger dots being associated with higher population scores. This map aligns smoothly with both the findings of existing literature and the overall COI distribution across the U.S. Notice how the blue dots cluster around crowded or heavily populated regions like the coast of California and the East Coast. These blue dots also tend to be larger, highlighting how these highly populated areas have higher education scores. This visualization backs up existing research in the field that has found educational opportunities tend to be more abundant in urban or densely populated areas, while lowly populated regions tend to be more remote and lack educational opportunities.
             </p>
           </Typography>
-          <TableauChart url={"https://public.tableau.com/app/profile/ijung.park/viz/shared/D2SXNY49M "} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/shared/D2SXNY49M?:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{
