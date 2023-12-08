@@ -75,9 +75,9 @@ const Data = () => {
                  src= {diversityKidsPic} 
                  alt="Diversity Data"
                  sx={{
-                    maxWidth: '50%',
+                    maxWidth: '30%',
                     alignItems:'left',
-                    height: '50%',
+                    height: '30%',
                     marginTop: '1rem',
                     marginBottom: '1rem'
                  }}

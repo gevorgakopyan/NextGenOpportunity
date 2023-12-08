@@ -6,6 +6,11 @@ const TableauChart = ({ url, options }) => {
 
   const initViz = useCallback(() => {
     // Dispose the existing viz before creating a new one
+    // eslint-disable-next-line
+    const vizOptions = {
+      ...options,
+      locale: 'en-US' // This enforces English language in the Tableau visualization
+    };
     if (vizRef.current) {
       vizRef.current.dispose();
     }
