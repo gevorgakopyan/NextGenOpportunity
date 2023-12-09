@@ -1,17 +1,46 @@
-import React from 'react';
+import React,{ useRef, useEffect } from 'react';
 import Navbar from './Navbar';
 import Logo from './img/logongo.png'
 import { Box, Container, Typography } from '@mui/material';
+import './Fade.css'
+
 
 const About = () => {
+    const fadeInDivs = useRef([]);
+    
+    const handleScroll = () => {
+        fadeInDivs.current.forEach((div) => {
+        if (
+            div.getBoundingClientRect().top <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        ) {
+            div.classList.add('visible');
+        } else {
+            div.classList.remove('visible');
+        }
+        });
+    };
+    
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+        setTimeout(() => {
+        handleScroll();
+        }, 100);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+          };
+        }, []);
+      
   return (
     <>
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
+        <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             About the Project
           </Typography>
+          
           <Box component="img" 
                  src= {Logo} 
                  alt="logo"
@@ -45,6 +74,8 @@ const About = () => {
           >
             This website, <a href="/">Next Gen Opportunity</a>, is our team's digital humanities project exploring the role of location and geography in shaping child education and opportunity across the United States.
           </Typography>
+          </div>
+          <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
           <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Our Research Questions 
           </Typography>
@@ -70,6 +101,8 @@ const About = () => {
           >
             2. What patterns exist between income, education opportunity, and population?
           </Typography>
+          </div>
+          <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
           <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Sources
           </Typography>
@@ -120,6 +153,8 @@ const About = () => {
           >
             We conducted our statistical analysis for the project in R and Python and created data visualizations in Tableau. 
           </Typography> */}
+          </div>
+          <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
           <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Presentation 
           </Typography>
@@ -137,7 +172,10 @@ const About = () => {
             All images, including those on the cube faces, have descriptive alt text, making the content accessible to screen reader users.
             he website's color scheme is designed with high contrast in mind, aiding visibility for users with visual impairments and ensuring compliance with standards.
           </Typography>
+          </div>
+          <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
           <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
+            
             Acknowledgements
           </Typography>
           <Typography
@@ -162,6 +200,7 @@ const About = () => {
           >
             We would also like to thank <b>Dr. Wendy Perla Kertz</b> for sharing your passion and knowledge about the Digital Humanities and giving us the tools needed to succeed in this project!
           </Typography>
+          </div>
         </Box>
       </Container>
     </>
