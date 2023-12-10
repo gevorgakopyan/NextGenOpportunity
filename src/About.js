@@ -45,9 +45,9 @@ const About = () => {
                  src= {Logo} 
                  alt="logo"
                  sx={{
-                    maxWidth: '35%',
+                    maxWidth: '30%',
                     alignItems:'left',
-                    height: '35%',
+                    height: '30%',
                     marginTop: '1rem',
                     marginBottom: '1rem'
                  }}
@@ -88,7 +88,7 @@ const About = () => {
               color: 'black'
             }}
           >
-            1. What role do local population numbers play in children’s educational opportunities in the U.S.?
+            <b>1. What role do local population numbers play in children’s educational opportunities in the U.S.?</b>
            </Typography>
            <Typography
             variant='body1'
@@ -99,7 +99,7 @@ const About = () => {
               color: 'black'
             }}
           >
-            2. What patterns exist between income, education opportunity, and population?
+            <b>2. What patterns exist between income, education opportunity, and population?</b>
           </Typography>
           </div>
           <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
@@ -170,7 +170,7 @@ const About = () => {
             This website, crafted using React and Material-UI (MUI), features an innovative and engaging interface centered around a 3D rotating cube. Each face of the cube represents a different page or section of the site, allowing users to navigate by simply rotating the cube. This interactive element adds a unique and visually appealing aspect to the user experience.
             Material-UI enhances this with its sleek, modern design elements, ensuring a visually appealing and consistent look across the site.
             All images, including those on the cube faces, have descriptive alt text, making the content accessible to screen reader users.
-            he website's color scheme is designed with high contrast in mind, aiding visibility for users with visual impairments and ensuring compliance with standards.
+            The website's color scheme is designed with high contrast in mind, aiding visibility for users with visual impairments and ensuring compliance with standards.
           </Typography>
           </div>
           <div ref={(el) => { fadeInDivs.current.push(el); }} className="fade-in">
