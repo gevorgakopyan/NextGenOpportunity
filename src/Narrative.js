@@ -1,11 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Navbar from './Navbar';
-import { Container, Box, Tabs, Tab, Typography }  from '@mui/material';
+import { Container, Box, Tabs, Tab, Typography, Link, Button }  from '@mui/material';
 import TableauChart from './TableauChart';
 import Inequality from './img/inequality.jpg';
 import n2 from './img/narrative2.jpg';
 import n3 from './img/narrative3.jpg';
-// import BasicTabs, { TabPanel } from './BasicTabs';
+import nar1 from './img/nar1.jpg';
+import nar2 from './img/nar2.jpeg';
+import nar3 from './img/nar3.jpg';
+import nar4 from './img/nar4.jpeg';
+import nar5 from './img/nar5.jpeg';
+import nar6 from './img/nar6.jpg';
+import nar7 from './img/nar7.jpeg';
+import nar8 from './img/nar8.jpg';
+
+
+import './Fade.css';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -28,6 +39,30 @@ function TabPanel(props) {
 
 
 const Narrative = () => {
+  const fadeInDivs = useRef([]);
+    
+    const handleScroll = () => {
+        fadeInDivs.current.forEach((div) => {
+        if (
+            div.getBoundingClientRect().top <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        ) {
+            div.classList.add('visible');
+        } else {
+            div.classList.remove('visible');
+        }
+        });
+    };
+    
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+        setTimeout(() => {
+        handleScroll();
+        }, 100);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+          };
+        }, []);
   const [value, setValue] = useState(0); // State to track the active tab
 
   const handleChange = (event, newValue) => {
@@ -45,14 +80,16 @@ const Narrative = () => {
                   backgroundColor: 'primary.main',
                 },
                 '.MuiTab-root': {
-                  color: '#046c75', // Change color of the tabs
+                  color: 'black', // Change color of the tabs
                   '&.Mui-selected': {
-                    color: 'black', // Change color when tab is selected
+                    color: '#046c75', // Change color when tab is selected
                   },
                 }
               }}>
               <Tab label="Introduction" />
-              <Tab label="Literature Overview" sx={{paddingLeft: '50px'}} />
+              <Tab label="Background" sx={{paddingLeft: '50px'}} />
+              <Tab label="Population & Education" sx={{paddingLeft: '50px'}} />
+              <Tab label="Socioeconomic Status & Education" sx={{paddingLeft: '50px'}} />
               <Tab label="Conclusion" sx={{paddingLeft: '50px'}}/>
               {/* Add more tabs as needed */}
             </Tabs>
@@ -71,29 +108,16 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-              Over 70 million children in the United States are growing up across a variety of communities shaped by distinct geographies and demographics. Depending on where and how they grow up, their likelihood of success in educational attainment, economic mobility, and general wellbeing will be vastly different. There are many markers of high child opportunity. Out of these, one of the most prominent includes quality education. Children from families who live in economically prosperous neighborhoods with access to resources tend to receive a larger academic advantage in the form of well-funded schools and enhanced support networks. However, could there be deeper nuances to what contributes to high educational opportunity in children? As income gaps widen and schools struggle in both rural and urban locales, the factors behind educational disparities deserve further examination. What patterns exist within the population levels and socioeconomic status of American children’s home regions, and how do they connect to educational opportunity?            
-            </p>
-          </Typography>
-          <Typography
-            variant='body1'
-            sx={{
-              margin: '0.5rem auto',
-              maxWidth: 'calc(min(90%, 850px))',
-              textAlign: 'justify',
-              color: 'black'
-            }}
-          >
-            <p style={{textIndent: "25px"}}>
-            This is the question we investigate using the Child Opportunity Index. The Child Opportunity Index (COI), provided by the organization DiversityDataKids, aggregates data from 29 indicators of local child opportunity in the sectors of education, health, and socio-economic status. Specifically, we used the 2015 COI 2.0 Zip Code dataset, which estimates the COI score for each ZIP code based on the census tracts used in the original COI calculations.
+            Over 70 million children in the United States are growing up across a variety of communities shaped by distinct geographies and demographics. Depending on where and how they grow up, their likelihood of success in educational attainment, economic mobility, and general wellbeing will be vastly different. There are many markers of high child opportunity. Out of these, one of the most prominent includes quality education. Children from families who live in economically prosperous neighborhoods with access to resources tend to receive a larger academic advantage in the form of well-funded schools and enhanced support networks. However, could there be deeper nuances to what contributes to high educational opportunity in children? As income gaps widen and schools struggle in both rural and urban locales, the factors behind educational disparities deserve further examination. <i>What patterns exist within the population levels and socioeconomic status of American children’s home regions, and how do they connect to educational opportunity? </i>
             </p>
           </Typography>
           <Box component="img" 
                  src= {Inequality} 
                  alt="Diversity Data"
                  sx={{
-                    maxWidth: '50%',
+                    maxWidth: '40%',
                     alignItems:'left',
-                    height: '50%',
+                    height: '40%',
                     marginTop: '1rem',
                     marginBottom: '1rem'
                  }}
@@ -121,11 +145,24 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            There is currently abundant research on differences in child opportunity across the urban and rural continuum. Our research examines disparities in education and socioeconomic status across higher and lower populated zip codes. This is useful for applying to our investigation into social spaces, as urban and rural designations are typically based on population levels, with urban zones having higher population levels and rural regions having lower populations. Many researchers argue that education levels are higher in urban areas. One study found that children, across different family characteristics and academic abilities who came from urban areas consistently chose to invest in their education when juxtaposed with children who were raised in rural environments (Van Maarseveen). However, the urban rural divide education is much more complicated than that, with some researchers finding that while child opportunity may be higher in urban areas compared to their rural counterparts, there are also greater inequities in child opportunity (Acevedo-Garcia, et al.). Scholarship further suggests that educational inequality cannot be simplified to the urban-rural binary and instead is much more connected to class differences with poverty being strongly linked to poor academic performance. Thus, as we explore differences in education between high and low populated areas, it is important for us to also examine variability within rural and urban areas as well as other domains such as socioeconomic status that may affect academic opportunity.
+              This is the question we investigate using the Child Opportunity Index. The Child Opportunity Index (COI), provided by the organization DiversityDataKids, aggregates data from 29 indicators of local child opportunity in the sectors of education, health, and socio-economic status. Specifically, we used the 2015 COI 2.0 Zip Code dataset, which estimates the COI score for each ZIP code based on the census tracts used in the original COI calculations.
+            </p>
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+            There is currently abundant research on differences in child opportunity across the urban and rural continuum. Our research examines disparities in education and socioeconomic status across higher and lower populated zip codes. This is useful for applying to our investigation into social spaces, as urban and rural designations are typically based on population levels, with urban zones having higher population levels and rural regions having lower populations. Many researchers argue that education levels are higher in urban areas. One study found that children, across different family characteristics and academic abilities who came from urban areas consistently chose to invest in their education when juxtaposed with children who were raised in rural environments <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1093/jeg/lbaa033'>(Van Maarseveen). </a>
             </p>
           </Typography>
           <Box component="img" 
-                 src= {n2} 
+                 src= {nar1} 
                  alt="Diversity Data"
                  sx={{
                     maxWidth: '50%',
@@ -158,7 +195,20 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            Although educational gaps have been the subject of numerous past studies, our project specifically zeroes in on the relationship between socio spatial contexts and academic access. Educational opportunity continues to be influenced by a complex web of factors. While each community shares a need for providing children with quality education, their unique circumstances warrant customized solutions. Examining the patterns of educational access across geographies can call attention to previously overlooked areas of study, fostering a more nuanced and targeted approach to bridge gaps among children from different geographic landscapes. In the pursuit of a more equitable education system, further research may not only deepen our understanding of the dynamics at work in educational disparities but also provide a basis for developing tailored policies that better serve the communities they were created for. Ultimately, we aim to promote a more equitable landscape for the benefit of all children–and the future they create.
+            However, the urban rural divide education is much more complicated than that, with some researchers finding that while child opportunity may be higher in urban areas compared to their rural counterparts, there are also greater inequities in child opportunity <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1377/hlthaff.2020.00735'>(Acevedo-Garcia, et al.)</a>. Scholarship further suggests that educational inequality cannot be simplified to the urban-rural binary and instead is much more connected to class differences with poverty being strongly linked to poor academic performance. Thus, as we explore differences in education between high and low populated areas, it is important for us to also examine variability within rural and urban areas as well as other domains such as socioeconomic status that may affect academic opportunity.
+            </p>
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+            In order to understand the next generation of children and their educational opportunities, it is essential to contextualize the state of modern day education. Before delving more deeply into current educational challenges and trends, here is a history of education in the United States.
             </p>
           </Typography>
           <Typography
@@ -204,6 +254,9 @@ const Narrative = () => {
               Image Credit: IStock
             </p>
           </Typography>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
+            Traditional Views: The Rural-Urban Binary
+          </Typography>
           <Typography
             variant='body1'
             sx={{
@@ -214,7 +267,57 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            Urban and rural areas are usually viewed as fundamentally distinct. This perspective is prevalent in many scholarly discussions when it comes to education. Traditionally, inequities have often been viewed to be concentrated in urban areas. Indeed, it does appear that urban areas tend to house large opportunity disparities for children. In a study investigating racial and ethnic inequities with information from the Child Opportunity Index 2.0, it was observed that 97% variation in child opportunity found in urban areas, and “[i]n more than one-third of metropolitan areas, the gap between their very high- and very low-opportunity neighborhoods is larger than the gap across the entire national neighborhood distribution” (Acevedo-Garcia, et al. 6). Rural areas come with their own disadvantages, though. A study comparing urban and rural children in the Dutch school system found that “children who grow up in urban areas consistently choose to invest more in their education compared with children who grow up in more rural environments” and that “[c]hildren in rural communities do not seem to enjoy or take the same educational opportunities as children who grow up in urban communities, even in a country such as the Netherlands where the rural areas are relatively accessible from an international perspective” (Van Maarseveen 23). This reflects the more remote nature of rural communities. With lower proximity to resources and networks, children growing up in rural areas may be less likely to pursue opportunities that are difficult to access. 
+            Urban and rural areas are usually viewed as fundamentally distinct. This perspective is prevalent in many scholarly discussions when it comes to education. Traditionally, inequities have often been viewed to be concentrated in urban areas. Indeed, it does appear that urban areas tend to house large opportunity disparities for children. In a study investigating racial and ethnic inequities with information from the Child Opportunity Index 2.0, it was observed that 97% variation in child opportunity found in urban areas, and “[i]n more than one-third of metropolitan areas, the gap between their very high- and very low-opportunity neighborhoods is larger than the gap across the entire national neighborhood distribution” 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1377/hlthaff.2020.00735'>(Acevedo-Garcia, et al. 6).</a> Rural areas come with their own disadvantages. A study comparing urban and rural children in the Dutch school system found that “children who grow up in urban areas consistently choose to invest more in their education compared with children who grow up in more rural environments” and that “[c]hildren in rural communities do not seem to enjoy or take the same educational opportunities as children who grow up in urban communities, even in a country such as the Netherlands where the rural areas are relatively accessible from an international perspective” 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1093/jeg/lbaa033'>(Van Maarseveen 23).</a> This reflects the more remote nature of rural communities. With lower proximity to resources and networks, children growing up in rural areas may be less likely to pursue opportunities that are difficult to access. 
+            </p>
+          </Typography>
+          <Box component="img" 
+                 src= {nar2} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credit: Gavin Hellier / AWL Images
+            </p>
+          </Typography>
+          <Box component="img" 
+                 src= {nar3} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credit: Tony Webster / Wikimedia Commons
             </p>
           </Typography>
           <Typography
@@ -227,7 +330,62 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            However, it has been acknowledged that there is a “definitional messiness” to the terms “rural” and “urban” (Tieken 2), and researchers have called out the tendency to interpret geographical spaces on too much of an urban-rural binary. Definitions for urban-rural categories can vary immensely, and many neighborhoods in the U.S. fall into categories that are not neatly urban or rural. This has been investigated in literature such as the article “Schools at the Rural-Urban Boundary: Blurring the Divide?”, where school districts were analyzed with categories that acknowledged deeper nuances in the spectrum between rural and urban, with labels of “inner, middle, and outer” for suburban districts based on their proximity to an urban boundary, as well as spaces separated into “small and large” urban spaces. The study revealed that “it is a relatively narrow band of schools in the middle suburbs that are the most advantaged in terms of demographics and resources” (Burdick-Will and Logan 15), indicating that child opportunity is not evenly high in all areas that fall under the broad “suburban” label. Suburban districts bordering rural districts, or “outer suburbs,” were very similar in characteristics to their rural counterparts, and urban and rural public schools were found to experience notably comparable levels of economic disadvantage, low achievement and instructional salaries per student (Burdick-Will and Logan 15). Despite these similarities, impoverished districts in urban and rural zones have often found themselves competing for resources, as policy discussions have focused on either one or the other, emphasizing the opposing nature of the two geographies (Tieken 2).
+            However, it has been acknowledged that there is a “definitional messiness” to the terms “rural” and “urban”
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1080/0161956X.2017.1324662'>(Tieken 2)</a>, and researchers have called out the tendency to interpret geographical spaces on too much of an urban-rural binary. Definitions for urban-rural categories can vary immensely, and many neighborhoods in the U.S. fall into categories that are not neatly urban or rural. This has been investigated in literature such as the article “Schools at the Rural-Urban Boundary: Blurring the Divide?”, where school districts were analyzed with categories that acknowledged deeper nuances in the spectrum between rural and urban, with labels of “inner, middle, and outer” for suburban districts based on their proximity to an urban boundary, as well as spaces separated into “small and large” urban spaces. The study revealed that “it is a relatively narrow band of schools in the middle suburbs that are the most advantaged in terms of demographics and resources” 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1177/0002716217707176'>(Burdick-Will and Logan 15)</a>, indicating that child opportunity is not evenly high in all areas that fall under the broad “suburban” label. Suburban districts bordering rural districts, or “outer suburbs,” were very similar in characteristics to their rural counterparts, and urban and rural public schools were found to experience notably comparable levels of economic disadvantage, low achievement and instructional salaries per student 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1177/0002716217707176'>(Burdick-Will and Logan 15).</a> Despite these similarities, impoverished districts in urban and rural zones have often found themselves competing for resources, as policy discussions have focused on either one or the other, emphasizing the opposing nature of the two geographies 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1080/0161956X.2017.1324662'>(Tieken 2)</a>.
+            </p>
+          </Typography>
+          <Box component="img" 
+                 src= {nar4} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credit: LancerE / Flickr
+            </p>
+          </Typography>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
+            Income, Achievement, and Geographies: Socioeconomic Trends
+          </Typography>
+          <Box component="img" 
+                 src= {nar5} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credit: Michael Thomas 2014
             </p>
           </Typography>
           <Typography
@@ -240,7 +398,36 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-              When it comes to educational opportunity, socioeconomic status often appears in scholarly discussion. This makes sense, especially considering that high socioeconomic status was deemed most important for educational achievement, albeit with variations across demographics such as between European American and African American children (Leventhal and Brooks-Gunn 20). Trends in socioeconomic status, particularly through income, have been tracked across geographical spaces. Research found income inequality to be rising across the nation. In a study that used data from the Decennial Census and American Community Survey to investigate within-country income equality, it was found that nearly all counties–both metropolitan and nonmetropolitan–rose from low inequality to either moderate or high inequality from 1970 to 2016. High rates of inequality persistence were also exhibited, with over 90% of counties designated as having moderate inequality in 1970 remain classified as such in 2016 (Thiede 22). These aforementioned trends were seen across different spaces with varying population densities. There were some distinctions, however, as within-county income inequality was observed to be converging between metropolitan and non-metropolitan counties, not due to falling inequality, but instead because of a rising trend in income inequality in the metropolitan counties (Thiede 28). It should be noted that a few areas such as the Great Plains even experienced falling income inequality that ran contrary to the nationwide trend towards rising inequality (Thiede 27-28). The causes behind these income trends are also a subject of study. A similar study on income inequality across rural and urban spaces from 1975 to 2015 argued that rising national income inequality is not driven by a growing gap between rural and urban areas but rather rising income inequality in both urban and rural areas (Hertz and Silva 25). This may fall under the previously noted trend of rural and metropolitan public schools experiencing comparable difficulties in both economic advancement and academic achievement. 
+              When it comes to educational opportunity, socioeconomic status often appears in scholarly discussion. This makes sense, especially considering that high socioeconomic status was deemed most important for educational achievement, albeit with variations across demographics such as between European American and African American children 
+              <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1037/0033-2909.126.2.309'>(Leventhal and Brooks-Gunn 20).</a> Trends in socioeconomic status, particularly through income, have been tracked across geographical spaces. Research found income inequality to be rising across the nation. In a study that used data from the Decennial Census and American Community Survey to investigate within-country income equality, it was found that nearly all counties–both metropolitan and nonmetropolitan–rose from low inequality to either moderate or high inequality from 1970 to 2016. High rates of inequality persistence were also exhibited, with over 90% of counties designated as having moderate inequality in 1970 remain classified as such in 2016 
+              <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/ruso.12354'>(Thiede 22).</a> These aforementioned trends were seen across different spaces with varying population densities. There were some distinctions, however, as within-county income inequality was observed to be converging between metropolitan and non-metropolitan counties, not due to falling inequality, but instead because of a rising trend in income inequality in the metropolitan counties 
+              <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/ruso.12354'>(Thiede 28).</a> It should be noted that a few areas such as the Great Plains even experienced falling income inequality that ran contrary to the nationwide trend towards rising inequality 
+              <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/ruso.12354'>(Thiede 27-28).</a> The causes behind these income trends are also a subject of study. A similar study on income inequality across rural and urban spaces from 1975 to 2015 argued that rising national income inequality is not driven by a growing gap between rural and urban areas but rather rising income inequality in both urban and rural areas 
+              <a target="_blank" rel="noopener noreferrer" href='https://onlinelibrary.wiley.com/doi/abs/10.1111/ruso.12295'>(Hertz and Silva 25).</a> This may fall under the previously noted trend of rural and metropolitan public schools experiencing comparable difficulties in both economic advancement and academic achievement.
+            </p>
+          </Typography>
+          <Box component="img" 
+                 src= {nar6} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credit: Davel5957 / Getty Images
             </p>
           </Typography>
           <Typography
@@ -253,8 +440,33 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            These documented trends are important when we connect them to research involving the relationship between income and education. Children growing up in poverty face increased struggles in academic performance. Kindergarteners from low-income households receive scores that are around 0.70 standard deviations lower than their high-income peers in reading, language, and math, which develop into disparities in employment and earnings in adulthood (Votruba-Drzal et al. 2). Alongside an overall rising disparity in income, income-achievement gaps have been growing in recent decades. For children born 2001, the income-achievement gap in education is 30-40% larger than it was for children born in 1970, implying that recent generations are being affected by greater inequality in educational attainment based on socioeconomic status. 
-
+            These documented trends are important when we connect them to research involving the relationship between income and education. Children growing up in poverty face increased struggles in academic performance. Kindergarteners from low-income households receive scores that are around 0.70 standard deviations lower than their high-income peers in reading, language, and math, which develop into disparities in employment and earnings in adulthood
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/cdep.12152'>(Votruba-Drzal et al. 2).</a> Alongside an overall rising disparity in income, income-achievement gaps have been growing in recent decades. For children born 2001, the income-achievement gap in education is 30-40% larger than it was for children born in 1970, implying that recent generations are being affected by greater inequality in educational attainment based on socioeconomic status.
+          
+            </p>
+          </Typography>
+          <Box component="img" 
+                 src= {nar7} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credits: Joshua Hoover / U.S. Department of Education
             </p>
           </Typography>
           <Typography
@@ -267,7 +479,9 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-              Numerous studies have established relationships between income and academic success, but magnitude is also suggested to play a part in the strength of the income-achievement correlation. In large cities, for example, the link between low income and academic achievement in early childhood is at least three times stronger than it is in rural areas (Miller et al. 9). Reflecting this, urban low-income adolescents were found to be further behind their peers in reading and science performance than low-income adolescents in suburban and rural zones (Miller and Votruba-Drzal 18).
+            Numerous studies have established relationships between income and academic success, but magnitude is also suggested to play a part in the strength of the income-achievement correlation. In large cities, for example, the link between low income and academic achievement in early childhood is at least three times stronger than it is in rural areas 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1037/a0030244'>(Miller et al. 9).</a> Reflecting this, urban low-income adolescents were found to be further behind their peers in reading and science performance than low-income adolescents in suburban and rural zones 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/ruso.12067'>(Miller and Votruba-Drzal 18).</a>            
             </p>
           </Typography>
           <Typography
@@ -280,8 +494,36 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            Not all income-related disparities in child opportunity can be tied to urban-rural variations. Research concerning differences in the prevalence of adverse childhood experiences (such as abuse and neglect) across urban and rural spaces concluded that poverty, not geography, was the main factor in the occurrence of such experiences (Crouch et al. 6). This invites inquiry into how socioeconomic policy efforts could be employed to support child opportunity. Experimental initiatives have shown some promise. The U.S. Department of Housing and Urban Development’s Moving to Opportunity project that ran from 1994-1998 suggests merging low-income families with mixed-income neighborhoods can reduce likelihood of poverty persistence, but only when the move is made while the children were below the age of 13 (Chetty et al.). Perhaps the income distributions of a child’s neighborhood would be more significant to combat socioeconomic opportunity barriers than the urbanicity or rurality of their residential area.
-
+            Not all income-related disparities in child opportunity can be tied to urban-rural variations. Research concerning differences in the prevalence of adverse childhood experiences (such as abuse and neglect) across urban and rural spaces concluded that poverty, not geography, was the main factor in the occurrence of such experiences 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/jrh.12366'>(Crouch et al. 6)</a>. This invites inquiry into how socioeconomic policy efforts could be employed to support child opportunity. Experimental initiatives have shown some promise. The U.S. Department of Housing and Urban Development’s Moving to Opportunity project that ran from 1994-1998 suggests merging low-income families with mixed-income neighborhoods can reduce likelihood of poverty persistence, but only when the move is made while the children were below the age of 13 
+            <a target="_blank" rel="noopener noreferrer" href='https://www.jstor.org/stable/43821479'>(Chetty et al.)</a>. Perhaps the income distributions of a child’s neighborhood would be more significant to combat socioeconomic opportunity barriers than the urbanicity or rurality of their residential area.
+            </p>
+          </Typography>
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
+              Rurality and the Role of Health
+          </Typography>
+          <Box component="img" 
+                 src= {nar8} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+            Image Credits: Derwood Photography
             </p>
           </Typography>
           <Typography
@@ -294,13 +536,46 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            Finally, part of our literature touches upon the key role of health in child opportunity. Compared to urban children, rural children are heavily disadvantaged when it comes to health. Rural youth are 26% more likely to be obese than urban youth (McCormack and Meendering) and rural youth in poverty are at especially higher risk of developing mental, behavioral, and developmental disorders (Kelleher and Gardner 2017). Residing in isolated settings often result in decreased access to medical providers, and rural parents were less likely than urban parents to report a preventative healthcare or dental care visit for their children (Probst et al. 6). Children deserve to be in optimal health before they can reach their potential, and in this case rural children bear the consequences of being in areas that often lack readily available resources in healthcare, with consequences that can spill over into areas such as academic achievement. Though the health category is not within the main focus of our project, readers are encouraged to consider the wider picture of what affects children as we explore just a few factors in the complex web influencing patterns of child opportunity.
+            Finally, part of our literature touches upon the key role of health in child opportunity. Compared to urban children, rural children are heavily disadvantaged when it comes to health. Rural youth are 26% more likely to be obese than urban youth 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1016/j.jand.2015.10.024'>(McCormack and Meendering)</a> and rural youth in poverty are at especially higher risk of developing mental, behavioral, and developmental disorders 
+            <a target="_blank" rel="noopener noreferrer" href='https://browzine.com/libraries/33/articles/83885801'>(Kelleher and Gardner 2017).</a> Residing in isolated settings often result in decreased access to medical providers, and rural parents were less likely than urban parents to report a preventative healthcare or dental care visit for their children 
+            <a target="_blank" rel="noopener noreferrer" href='https://browzine.com/libraries/33/articles/60556370'>(Probst et al. 6).</a> Children deserve to be in optimal health before they can reach their potential, and in this case rural children bear the consequences of being in areas that often lack readily available resources in healthcare, with consequences that can spill over into areas such as academic achievement. Though the health category is not within the main focus of our project, readers are encouraged to consider the wider picture of what affects children as we explore just a few factors in the complex web influencing patterns of child opportunity.
             </p>
           </Typography>
-          </TabPanel>
-          <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
+          
+          <Typography variant='h5' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             The Child Opportunity Index Nationwide
           </Typography>
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+            To calculate the overall Child Opportunity Index (COI) score, 29 indicators were employed across the three domains.
+            </p>
+          </Typography>
+          <Link href="https://www.diversitydatakids.org/research-library/research-brief/indicators-child-opportunity?_ga=2.239337476.628930422.1701857790-1104497295.1696628039" underline="none">
+            <Button
+                variant="contained"
+                sx={{
+                    marginTop: '2rem',
+                    backgroundColor: '#046c75',
+                    color: 'white',
+                    '&:hover': {
+                        backgroundColor: 'primary.dark',
+                    },
+                    padding: '10px 20px', // Increased padding for a bigger button
+                    fontSize: '1.25rem',
+                }}
+                >
+                    COI Indicators
+                </Button>
+          </Link>
           <Typography
             variant='body1'
             sx={{
@@ -328,7 +603,9 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            We can see clusters of both higher (above 50, colored blue) and lower (below 50, colored red) COI scores concentrated in urban centers such as Los Angeles, Chicago, New York, and Seattle. This backs the work of Acevedo-Garcia, et al. in their findings that metropolitan areas house significant inequities in education. In this case, the heightened concentration of educational disparities also translates to general child opportunity. Nonmetropolitan areas have a mix of high and low COI scores. Most ZIP codes in very remote regions, such as rural Alaska, are mostly populated with scores on the lower end, while non-urban ZIP codes in states like North and South Dakota, Nebraska, and Kansas have a notable frequency of higher COI scores. Again, we see indications of alignment to existing literature, as this Great Plains region was mentioned as experiencing exceptional decreases to income inequality in research from Thiede. 
+            We can see clusters of both higher (above 50, colored blue) and lower (below 50, colored red) COI scores concentrated in urban centers such as Los Angeles, Chicago, New York, and Seattle. This backs the work of
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1377/hlthaff.2020.00735'>Acevedo-Garcia, et al.</a> in their findings that metropolitan areas house significant inequities in education. In this case, the heightened concentration of educational disparities also translates to general child opportunity. Nonmetropolitan areas have a mix of high and low COI scores. Most ZIP codes in very remote regions, such as rural Alaska, are mostly populated with scores on the lower end, while non-urban ZIP codes in states like North and South Dakota, Nebraska, and Kansas have a notable frequency of higher COI scores. Again, we see indications of alignment to existing literature, as this Great Plains region was mentioned as experiencing exceptional decreases to income inequality in research from 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/ruso.12354'>Thiede.</a> 
             </p>
           </Typography>
           <Typography
@@ -341,9 +618,12 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            If the overall COI score is reflective of previous scholarship regarding education, we might expect to see similarly aligned results as we move into focusing on educational opportunity. Child opportunity in education could be highest at a medium population density indicative of the “middle suburb” category discussed by Burdick-Will and Logan. In accordance with the concentrated opportunity gaps in urban zones, metropolitan centers could be a motley of ZIP codes boasting very high educational opportunity scores juxtaposed with ZIP codes possessing starkly lower forms of those scores.
+            If the overall COI score is reflective of previous scholarship regarding education, we might expect to see similarly aligned results as we move into focusing on educational opportunity. Child opportunity in education could be highest at a medium population density indicative of the “middle suburb” category discussed by 
+            <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1177/0002716217707176'>Burdick-Will and Logan.</a> In accordance with the concentrated opportunity gaps in urban zones, metropolitan centers could be a motley of ZIP codes boasting very high educational opportunity scores juxtaposed with ZIP codes possessing starkly lower forms of those scores.
             </p>
           </Typography>
+          </TabPanel>
+          <TabPanel value={value} index={2}>
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Relationships between Population & Education
           </Typography>
@@ -415,6 +695,8 @@ const Narrative = () => {
             These data visualizations add depth to our earlier discussion about regional differences in educational opportunities. Overall, educational opportunity score distributions are reflective of the findings communicated in established scholarship on education performance across diverse socio spatial contexts. 
             </p>
           </Typography>
+          </TabPanel>
+          <TabPanel value={value} index={3}>
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Relationships between Population & Education
           </Typography>
@@ -504,8 +786,34 @@ const Narrative = () => {
             However, one might wonder whether the correlation between social and economic status and education is prevalent in both high and low populated ZIP codes or if this relationship is much stronger in urban or rural regions.  In the plot above, both low-population and high-population areas show the strong relationship that as the socioeconomic opportunity score increases, the education opportunity score also increases. Furthermore, it appears that the interaction between socioeconomic opportunity score and education opportunity score may even be slightly more pronounced in low-population areas. Therefore, it can be concluded that the population itself does not significantly impact the interaction between education opportunity score and socioeconomic opportunity score and that socioeconomic status has a strong positive correlation with education. 
             </p>
           </Typography>
+          </TabPanel>
+          <TabPanel value={value} index={4}>
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Conclusion
+          </Typography>
+          <Box component="img" 
+                 src= {n2} 
+                 alt="Diversity Data"
+                 sx={{
+                    maxWidth: '50%',
+                    alignItems:'left',
+                    height: '50%',
+                    marginTop: '1rem',
+                    marginBottom: '1rem'
+                 }}
+            />
+          <Typography
+            variant='body1'
+            sx={{
+              margin: '0.5rem auto',
+              maxWidth: 'calc(min(90%, 850px))',
+              textAlign: 'justify',
+              color: 'black'
+            }}
+          >
+            <p style={{textIndent: "25px"}}>
+              Image Credit: Diversity Kids Data
+            </p>
           </Typography>
           <Typography
             variant='body1'
@@ -574,6 +882,25 @@ const Narrative = () => {
             In summary, our research has highlighted the multifaceted nature of educational disparities and the need for tailored solutions that consider not only income levels but also the unique characteristics of each community. By deepening our understanding of these dynamics, we hope to contribute to the development of policies that promote a more equitable education system, benefiting all children and shaping a brighter future for our society.
             </p>
           </Typography>
+          </TabPanel>
+          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered
+              sx={{
+                '.MuiTabs-indicator': {
+                  backgroundColor: 'primary.main',
+                },
+                '.MuiTab-root': {
+                  color: 'black', // Change color of the tabs
+                  '&.Mui-selected': {
+                    color: '#046c75', // Change color when tab is selected
+                  },
+                }
+              }}>
+              <Tab label="Introduction" />
+              <Tab label="Background" sx={{paddingLeft: '50px'}} />
+              <Tab label="Population & Education" sx={{paddingLeft: '50px'}} />
+              <Tab label="Socioeconomic Status & Education" sx={{paddingLeft: '50px'}} />
+              <Tab label="Conclusion" sx={{paddingLeft: '50px'}}/>
+            </Tabs>
         </Box>
       </Container>
     </>
