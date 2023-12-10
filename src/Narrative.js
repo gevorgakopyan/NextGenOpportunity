@@ -704,8 +704,8 @@ const Narrative = () => {
             Continuing our look into what factors are linked to educational opportunity, we now focus on exploring the social economic domain and seeing its potential relationships between population and education. While the red dots still represent zip codes with lower populations and the blue dots more heavily populated zip codes, this time the size of the dots corresponds to the social and economic score of the zip code. We have a visualization titled "Social Economic Opportunity Score of High Population and Low Population across U.S.," which is much like the one about educational opportunities but instead focuses on the relationship between population level and the socioeconomic domain, or income level. Again, you'll see bigger blue dots in states like California and New York, suggesting generally higher socioeconomic scores in higher populated levels. This relationship aligns with what we noticed before about education. 
             </p>
           </Typography>
-          <TableauChart url={"https://public.tableau.com/views/map-popvsincome/2?:language=ko-KR&:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
-          <TableauChart url={"https://public.tableau.com/views/pop-Incomebar/Sheet1?:language=ko-KR&:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/views/map-popvsincome/2?:language=en-US&:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/views/pop-Incomebar/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link "} options={{hideTabs: false}}/>
 
           <Typography
             variant='body1'
@@ -747,10 +747,10 @@ const Narrative = () => {
             }}
           >
             <p style={{textIndent: "25px"}}>
-            First, we aimed to examine education opportunity scores based on the socioeconomic opportunity level of each ZIP code. The resulting bar chart, which we can see above, reveals a critical trend: a better economic opportunity score results in a generally higher education opportunity score. Once again, ideas from <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/cdep.12152'>Votruba-Drzal, et al.</a> and <a target="_blank" rel="noopener noreferrer" href='https://public.tableau.com/views/DH101_17006831593880/3?:language=ko-KR&:display_count=n&:origin=viz_share_link'>Leventhal and Brooks-Gunn</a> on the strong association between high socioeconomic status and high educational achievement (and vice versa) are affirmed. As seen in the plot above, in general, across high and low populations, as the level of income increases, the Education Opportunity Score also rises, highlighting the close relationship between the economic and educational domains.
+            First, we aimed to examine education opportunity scores based on the socioeconomic opportunity level of each ZIP code. The resulting bar chart, which we can see above, reveals a critical trend: a better economic opportunity score results in a generally higher education opportunity score. Once again, ideas from <a target="_blank" rel="noopener noreferrer" href='https://doi.org/10.1111/cdep.12152'>Votruba-Drzal, et al.</a> and <a target="_blank" rel="noopener noreferrer" href='https://public.tableau.com/views/DH101_17006831593880/3?:language=en-US&:display_count=n&:origin=viz_share_link'>Leventhal and Brooks-Gunn</a> on the strong association between high socioeconomic status and high educational achievement (and vice versa) are affirmed. As seen in the plot above, in general, across high and low populations, as the level of income increases, the Education Opportunity Score also rises, highlighting the close relationship between the economic and educational domains.
             </p>
           </Typography>
-          <TableauChart url={"https://public.tableau.com/views/DH101_17006831593880/3?:language=ko-KR&:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
+          <TableauChart url={"https://public.tableau.com/views/DH101_17006831593880/3?:language=en-US&:display_count=n&:origin=viz_share_link"} options={{hideTabs: false}}/>
           <Typography
             variant='body1'
             sx={{
