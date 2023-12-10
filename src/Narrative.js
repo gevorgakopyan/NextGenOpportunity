@@ -1,17 +1,63 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from './Navbar';
-import { Box, Container, Typography } from '@mui/material';
+import { Container, Box, Tabs, Tab, Typography }  from '@mui/material';
 import TableauChart from './TableauChart';
 import Inequality from './img/inequality.jpg';
 import n2 from './img/narrative2.jpg';
 import n3 from './img/narrative3.jpg';
+// import BasicTabs, { TabPanel } from './BasicTabs';
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
 
 const Narrative = () => {
+  const [value, setValue] = useState(0); // State to track the active tab
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <>
       <Navbar />
       <Container mt={0} sx={{ paddingBottom: '2rem' }}>
         <Box textAlign={'center'}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered
+              sx={{
+                '.MuiTabs-indicator': {
+                  backgroundColor: 'primary.main',
+                },
+                '.MuiTab-root': {
+                  color: '#046c75', // Change color of the tabs
+                  '&.Mui-selected': {
+                    color: 'black', // Change color when tab is selected
+                  },
+                }
+              }}>
+              <Tab label="Introduction" />
+              <Tab label="Literature Overview" sx={{paddingLeft: '50px'}} />
+              <Tab label="Conclusion" sx={{paddingLeft: '50px'}}/>
+              {/* Add more tabs as needed */}
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Introduction
           </Typography>
@@ -128,7 +174,9 @@ const Narrative = () => {
             In order to understand the next generation of children and their educational opportunities, it is essential to contextualize the state of modern day education. Before delving more deeply into present educational challenges and trends, here is a history of education in the United States.
             </p>
           </Typography>
-          <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1q1IfgGh4DCZYuN8oVEW2K7qZJDANicngGTqKklf-uuE&font=Default&lang=en&initial_zoom=2&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0' title='Public Education in The 21st Century'>Timeline</iframe> 
+          <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1q1IfgGh4DCZYuN8oVEW2K7qZJDANicngGTqKklf-uuE&font=Default&lang=en&initial_zoom=2&height=650' width='80%' height='650' webkitallowFullScreen mozallowFullScreen allowFullScreen frameBorder='0' title='Public Education in The 21st Century'>Timeline</iframe> 
+          </TabPanel>
+          <TabPanel value={value} index={1}>
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             Overview of Existing Literature
           </Typography>
@@ -249,6 +297,7 @@ const Narrative = () => {
             Finally, part of our literature touches upon the key role of health in child opportunity. Compared to urban children, rural children are heavily disadvantaged when it comes to health. Rural youth are 26% more likely to be obese than urban youth (McCormack and Meendering) and rural youth in poverty are at especially higher risk of developing mental, behavioral, and developmental disorders (Kelleher and Gardner 2017). Residing in isolated settings often result in decreased access to medical providers, and rural parents were less likely than urban parents to report a preventative healthcare or dental care visit for their children (Probst et al. 6). Children deserve to be in optimal health before they can reach their potential, and in this case rural children bear the consequences of being in areas that often lack readily available resources in healthcare, with consequences that can spill over into areas such as academic achievement. Though the health category is not within the main focus of our project, readers are encouraged to consider the wider picture of what affects children as we explore just a few factors in the complex web influencing patterns of child opportunity.
             </p>
           </Typography>
+          </TabPanel>
           <Typography variant='h4' sx={{fontFamily: 'Georgia', color: '#046c75'}} mt={3}>
             The Child Opportunity Index Nationwide
           </Typography>

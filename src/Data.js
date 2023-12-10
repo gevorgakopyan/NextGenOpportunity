@@ -81,7 +81,7 @@ const Data = () => {
                  src= {datapic} // Replace with your image path
                  alt="Diversity Data"
                  sx={{
-                    maxWidth: '90%',
+                    maxWidth: '30%',
                     alignItems:'left',
                     height: 'auto',
                     marginTop: '1rem',
@@ -218,7 +218,7 @@ const Data = () => {
                  src= {d3} // Replace with your image path
                  alt="Diversity Data"
                  sx={{
-                    maxWidth: '90%',
+                    maxWidth: '40%',
                     alignItems:'left',
                     height: 'auto',
                     marginTop: '1rem',
