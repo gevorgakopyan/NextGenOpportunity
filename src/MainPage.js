@@ -100,7 +100,7 @@ const MainPage = () => {
         >
           <div style={{fontFamily: "Georgia"}}>
           <h2>
-           HU
+            Welcome to NextGenOpportunity, a student project about child opportunity in the United States. 
           </h2>
           <h2>
             Rotate and double click the cube to learn more!
